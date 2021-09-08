@@ -5,6 +5,9 @@ class Track {
     this.backgroundColor = this.getBackgroundColor();
     this.textColor = this.getTextColor();
   }
+  getName() {
+    return this.name;
+  }
   getBackgroundColor(){
     switch (this.album) {
       case 1: //CD
@@ -362,13 +365,56 @@ function loadBracket(size) {
   var canvasStyle = getComputedStyle(canvas);
   context = canvas.getContext('2d');
 
-  var width = parseInt(canvasStyle.getPropertyValue('width'), 10);
-  var height = parseInt(canvasStyle.getPropertyValue('height'), 10);
-
   base_image = new Image();
-  base_image.src = 'images/pablobrackettemplate.png';
-  base_image.onload = function(){
-    context.drawImage(base_image, 0, 0);
+  //base_image.src = 'images/pablobrackettemplate.png';
+  //base_image.onload = function(){
+  context.drawImage(base_image, 0, 0);
+
+  var initialX = 15;
+  var initialY = 20;
+  var x = initialX;
+  var y = initialY;
+  var HORIZONTAL_LINE_LENGTH = 165;
+  var LEVELS = Math.log(size, 2);
+  var leftHalf = true;
+  var verticalLineGap = 33;
+  context.fillStyle = "#ff0000";
+  context.lineWidth = 5;
+
+  for(let level = 1; level < LEVELS; level++) {
+    for (let i = 0; i < (size / level); i++) {
+
+      //have we switched halves from the left to the right of the bracket? If so, move coordinates to other half
+      if(i > (size/level) / 2 - 1 && leftHalf) {
+        leftHalf = false;
+        y = initialY;
+        x = 1740 - HORIZONTAL_LINE_LENGTH * (level - 1);
+      }
+
+      //draw horizontal line
+      context.beginPath();
+      context.moveTo(x, y);
+      context.lineTo(x + HORIZONTAL_LINE_LENGTH, y);
+      context.stroke();
+
+      //for every other pair of horizontal lines, connect them with a vertical line
+      if(i % 2 == 0) {
+        let verticalLineDistance;
+        (leftHalf) ? verticalLineDistance = HORIZONTAL_LINE_LENGTH : verticalLineDistance = 0;
+        context.moveTo(x + verticalLineDistance, y);
+        context.lineTo(x + verticalLineDistance, y + verticalLineGap);
+        context.stroke();
+      }
+
+      y+=verticalLineGap;
+    }
+    //adjustments after we move to the next level of the tournament
+    leftHalf = true;
+    initialX += HORIZONTAL_LINE_LENGTH;
+    initialY += verticalLineGap / 2;
+    x = initialX;
+    y = initialY;
+    verticalLineGap*=2;
   }
 }
 
@@ -377,21 +423,28 @@ function generateBracket(size) {
   context = canvas.getContext('2d');
 
   //get 64 random tracks from the whitelist
-  shuffle(whitelist);
-  whitelist = whitelist.slice(0,64);
+  let lineup = shuffle(whitelist);
+  lineup = lineup.slice(0,64);
 
-  var x = 15;
+  var x = 0;
   var y = 10;
   var songCount = 0;
 
-  whitelist.forEach((song) => {
+  lineup.forEach((song) => {
     context.beginPath();
-    context.fillStyle = song.getBackgroundColor(); 
-    context.rect(x, y, 150, 24);
+    context.fillStyle = song.getBackgroundColor();
+    context.rect(x, y, 170, 28);
     context.fill();
+
+    context.fillStyle = song.getTextColor();
+    context.font = "16px Arial";
+    context.fillText(song.getName(), x + 5, y + 20);
+
     songCount++;
     y += 33;
-    if(songCount == 32){
+
+    //if one half of the bracket has been filled, move to the other half
+    if(songCount == size / 2){
       y = 10;
       x = 1750;
     }
