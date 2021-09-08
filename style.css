@@ -82,11 +82,11 @@
 		align-self: center;
 		display: flex;
 		flex-direction: column;
-		flex: 1 1 35%;
+		flex: 1 1 30%;
 	}
 	#col2{
 		flex-direction: column;
-		flex: 1 1 60%;
+		flex: 1 1 67%;
 		display: flex;
 		min-width: 300px;
 		text-align: center;
@@ -119,6 +119,7 @@
 		background-color: #f58b57;
 		font-size: .8em;
 		min-height: 1.8em;
+		min-width: 13em;
 		width: 28%;
 		height: 7%;
 		border-radius: 10px;
@@ -126,7 +127,6 @@
 		font-family: Arial, sans-serif;
 		border: none;
 		align-self: center;
-	}
 	}
 	#generateButton:hover {
 	  background-color: #9b4b23;
