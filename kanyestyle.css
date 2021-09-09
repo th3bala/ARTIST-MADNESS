@@ -46,7 +46,7 @@
 	.tracklist div p{
 		margin: 0;
 		font-size: .9em;
-		font-family: Arial, sans-serif;
+		font-family: "Work Sans", sans-serif;
 	}
 	#madnessType {
 		flex: 1 1 20%;
@@ -151,6 +151,17 @@
 	#restartButton:hover {
 		background-color: #a00005;
 		color: white;
+	}
+	#saveButton {
+		background-color: #f58b57;
+	}
+	#saveButton:hover {
+		background-color: #9b4b23;
+		color: white;
+	}
+	#buttons{
+		display: flex;
+		justify-content: space-around;
 	}
 	#footerNav {
 		display: flex;

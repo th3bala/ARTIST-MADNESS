@@ -432,6 +432,16 @@ function generateBracket(size) {
   setupRounds();
 }
 
+function saveBracket() {
+  var canvas = document.getElementById("bracket");
+  var dataURL = canvas.toDataURL("image/png", 1.0);
+  var a = document.createElement('a');
+  a.href = dataURL;
+  a.download = "artistmadnessbracket.png";
+  document.body.appendChild(a);
+  a.click();
+}
+
 function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
