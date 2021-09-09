@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="utf-8">
+	 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="kanyestyle.css">
+		<script src="script.js"></script>
+		<title>KANYE MADNESS</title>
+	</head>
+	<body onload="loadLists();
+								loadBracket(64);">
+		<div id = columnContainer>
+			<div class = "cols" id = "col1">
+				<div id = "madnessType">
+					<h1>KANYE MADNESS</h1>
+					<h5>BRACKET/GENERATOR</h5>
+				</div>
+				<div id = "select">
+					<div id = "titles">
+						<h6>INCLUDE &#x1F30A;</h6>
+						<h6>EXCLUDE &#x1F6AB;</h6>
+					</div>
+					<div id = "lists">
+						<div class = "tracklist" id = "whitelist"></div>
+						<div class = "tracklist" id = "blacklist"></div>
+					</div>
+				</div>
+			</div>
+			<div class = "cols" id = "col2">
+				<div id = "aace">
+				</div>
+				<div id = "viewbracket">
+					<button type = "submit" onclick = "generateBracket(64)" id = "generateButton">GENERATE BRACKET</button>
+					<canvas width = '1920' height = '1080' id="bracket"></canvas>
+				</div>
+			</div>
+		</div>
+		<nav id = "footerNav">
+			<a class = "footerNavLink" href = "index.html">ARTIST MADNESS</a>
+			<b>|</b>
+			<a class = "footerNavLink" href = "about.html">ABOUT</a>
+			<b>|</b>
+			<a class = "footerNavLink" href = "privacypolicy.html">PRIVACY POLICY</a>
+		</nav>
+	</body>
+</html>

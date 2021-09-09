@@ -1,11 +1,19 @@
 /*@media only screen and (orientation: landscape) {*/
 	html {
 		background: #f58b57;
+		height: 100%;
 	}
 	body {
+		margin: 0 .5em 0 .5em;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	#columnContainer {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
+		flex: 1 1 98%;
 		margin: 0;
 	}
 	h1 {
@@ -37,9 +45,8 @@
 		font-family: Arial, sans-serif;
 	}
 	#madnessType {
-		padding: 0px;
-		margin-bottom: 3%;
-		flex: 0 0 20%;
+		flex: 1 1 20%;
+		margin: 0 0 .5em 0;
 	}
 	#whitelist div:hover{
 		border: 3px solid red;
@@ -74,7 +81,7 @@
 		background-color: white;
 		width: 100%;
 		display: flex;
-		flex: 3 2 auto;
+		flex: 1 1 80%;
 		flex-direction: column;
 		opacity: .95;
 	}
@@ -86,18 +93,20 @@
 	}
 	#col2{
 		flex-direction: column;
-		flex: 1 1 67%;
+		flex: 1 1 68%;
 		display: flex;
 		min-width: 300px;
 		text-align: center;
 	}
+	.cols {
+		margin: .3em;
+	}
 	#aace {
-		flex: 1 1 30%;
+		flex: 1 1 auto;
 	}
 	#viewbracket {
 		text-align: center;
 		border-radius: 20px;
-		max-height: 97vh;
 		background-color: white;
 		box-sizing: border-box;
 		padding: 10px;
@@ -106,9 +115,6 @@
 		flex-direction: column;
 		justify-content: center;
 		align-self: flex-end;
-	}
-	.cols {
-		margin: .5em;
 	}
 	#bracket {
 		width: 100%;
@@ -131,6 +137,18 @@
 	#generateButton:hover {
 	  background-color: #9b4b23;
 		color: white;
+	}
+	#footerNav {
+		display: flex;
+		justify-content: center;
+		font-family: Arial;
+		font-size: .75em;
+		flex: 1 1 2%;
+		align-items: center;
+		text-align: center;
+	}
+	.footerNavLink {
+		flex: 1 1 50%;
 	}
 /*}Explicit mobile layout below (unused)*/
 
