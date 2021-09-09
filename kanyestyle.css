@@ -13,7 +13,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
-		flex: 1 1 98%;
+		flex: 1 2 98%;
 		margin: 0;
 	}
 	h1 {
@@ -121,9 +121,8 @@
 		height: 100%;
 		align-self: center;
 	}
-	#generateButton {
-		background-color: #f58b57;
-		font-size: .8em;
+	.omniButton {
+		font-size: .9em;
 		min-height: 1.8em;
 		min-width: 13em;
 		width: 28%;
@@ -133,9 +132,20 @@
 		font-family: Arial, sans-serif;
 		border: none;
 		align-self: center;
+		margin-top: 5px;
+	}
+	#generateButton {
+		background-color: #f58b57;
 	}
 	#generateButton:hover {
 	  background-color: #9b4b23;
+		color: white;
+	}
+	#restartButton {
+		background-color: #ff0000;
+	}
+	#restartButton:hover {
+		background-color: #a00005;
 		color: white;
 	}
 	#footerNav {

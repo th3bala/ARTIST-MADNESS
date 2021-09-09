@@ -365,10 +365,15 @@ function loadBracket(size) {
   var canvasStyle = getComputedStyle(canvas);
   context = canvas.getContext('2d');
 
-  base_image = new Image();
+  //base_image = new Image();
   //base_image.src = 'images/pablobrackettemplate.png';
   //base_image.onload = function(){
-  context.drawImage(base_image, 0, 0);
+  //context.drawImage(base_image, 0, 0);
+
+  context.beginPath();
+  context.fillStyle = "#ffffff";
+  context.rect(0, 0, canvas.width, canvas.height);
+  context.fill();
 
   var initialX = 15;
   var initialY = 20;
@@ -418,6 +423,25 @@ function loadBracket(size) {
   }
 }
 
+function restart() {
+  let generateButton = document.getElementById('restartButton');
+  generateButton.id = "generateButton";
+  generateButton.innerText = 'GENERATE BRACKET';
+  loadBracket(64);
+  generateButton.onclick = function() { generateBracket(64); };
+  document.getElementById('titles').style.visibility = "visible";
+  document.getElementById('lists').style.visibility = "visible";
+}
+
+function setupRounds() {
+  let generateButton = document.getElementById('generateButton');
+  generateButton.id = "restartButton";
+  generateButton.innerText = 'RESTART';
+  generateButton.onclick = function() { restart(); };
+  document.getElementById('titles').style.visibility = "hidden";
+  document.getElementById('lists').style.visibility = "hidden";
+}
+
 function generateBracket(size) {
   var canvas = document.getElementById('bracket'),
   context = canvas.getContext('2d');
@@ -449,6 +473,8 @@ function generateBracket(size) {
       x = 1750;
     }
   });
+
+  setupRounds();
 }
 
 function shuffle(a) {
