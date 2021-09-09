@@ -1,14 +1,18 @@
 body {
-text-align: center;
-font-family: Arial;
-color: #e40000;
-background-color: #0e0d2d;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  color: #e40000;
+  background-color: #0e0d2d;
+}
+.madnessLink {
+  text-decoration: none;
+  font-size: 1.2em;
 }
 #footerNav {
   width: 100%;
   display: flex;
   justify-content: center;
-  font-family: Arial;
+  font-family: "Work Sans";
   font-size: .75em;
   flex: 1 1 2%;
   position: fixed;
@@ -18,4 +22,6 @@ background-color: #0e0d2d;
 }
 .footerNavLink {
   flex: 1 1 50%;
+  color: #ffffff;
+  text-decoration: none;
 }

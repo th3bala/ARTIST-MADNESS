@@ -313,6 +313,15 @@ function loadBracket(size) {
   var canvas = document.getElementById('bracket');
   var canvasStyle = getComputedStyle(canvas);
   context = canvas.getContext('2d');
+  var initialX = 15;
+  var initialY = 20;
+  var x = initialX;
+  var y = initialY;
+  var HORIZONTAL_LINE_LENGTH = 165;
+  var LEVELS = Math.log(size, 2);
+  var leftHalf = true;
+  var verticalLineGap = 33;
+  var currentSize = size;
 
   //base_image = new Image();
   //base_image.src = 'images/pablobrackettemplate.png';
@@ -324,22 +333,18 @@ function loadBracket(size) {
   context.rect(0, 0, canvas.width, canvas.height);
   context.fill();
 
-  var initialX = 15;
-  var initialY = 20;
-  var x = initialX;
-  var y = initialY;
-  var HORIZONTAL_LINE_LENGTH = 165;
-  var LEVELS = Math.log(size, 2);
-  var leftHalf = true;
-  var verticalLineGap = 33;
+  context.fillStyle = "#000000";
+  context.font = "44px Work Sans";
+  context.fillText("ARTISTMADNESS.COM", 727, 50);
+
   context.fillStyle = "#ff0000";
   context.lineWidth = 5;
 
-  for(let level = 1; level < LEVELS; level++) {
-    for (let i = 0; i < (size / level); i++) {
-
+  for(let level = 1; level < LEVELS + 1; level++) {
+    currentSize = (size / Math.pow(2, level - 1));
+    for (let i = 0; i < currentSize; i++) {
       //have we switched halves from the left to the right of the bracket? If so, move coordinates to other half
-      if(i > (size/level) / 2 - 1 && leftHalf) {
+      if(i > currentSize / 2 - 1 && leftHalf) {
         leftHalf = false;
         y = initialY;
         x = 1740 - HORIZONTAL_LINE_LENGTH * (level - 1);

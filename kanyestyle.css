@@ -1,4 +1,8 @@
 /*@media only screen and (orientation: landscape) {*/
+	@font-face {
+		font-family: "WorkSans-Medium";
+		src: url("/fonts/WorkSans-Medium.ttf") format("ttf");
+	}
 	html {
 		background: #f58b57;
 		height: 100%;
@@ -151,7 +155,7 @@
 	#footerNav {
 		display: flex;
 		justify-content: center;
-		font-family: Arial;
+		font-family: "Work Sans";
 		font-size: .75em;
 		flex: 1 1 2%;
 		align-items: center;
@@ -160,6 +164,7 @@
 	}
 	.footerNavLink {
 		flex: 1 1 50%;
+		text-decoration: none;
 	}
 /*}Explicit mobile layout below (unused)*/
 
