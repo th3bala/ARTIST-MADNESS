@@ -29,6 +29,7 @@ var whitelist = [];
 var blacklist = [];
 var lineup = [];
 var currentRound = 1;
+var currentSelection = 0;
 
 function loadLists() {
   var tcd = new Album("#411218", "#e8982e");
@@ -321,7 +322,7 @@ function loadBracket(size) {
   var x = initialX;
   var y = initialY;
   var HORIZONTAL_LINE_LENGTH = 165;
-  var LEVELS = Math.log(size, 2);
+  var LEVELS = Math.log2(size);
   var leftHalf = true;
   var verticalLineGap = 33;
   var currentSize = size;
@@ -343,7 +344,7 @@ function loadBracket(size) {
   context.fillStyle = "#ff0000";
   context.lineWidth = 5;
 
-  for(let level = 1; level < LEVELS + 1; level++) {
+  for(let level = 1; level < LEVELS; level++) {
     currentSize = (size / Math.pow(2, level - 1));
     for (let i = 0; i < currentSize; i++) {
       //have we switched halves from the left to the right of the bracket? If so, move coordinates to other half
@@ -393,6 +394,7 @@ function restart() {
   document.getElementById('songChoiceButton1').remove();
   document.getElementById('songChoiceButton2').remove();
   currentRound = 1;
+  currentSelection = 0;
 }
 
 function setupRounds(size) {
@@ -403,7 +405,7 @@ function setupRounds(size) {
   document.getElementById('titles').style.display = "none";
   document.getElementById('lists').style.display = "none";
 
-  var LEVELS = Math.log(size, 2);
+  var LEVELS = Math.log2(size);
 
   let roundTitle = document.createElement("H2");
   roundTitle.className = "roundInfo";
@@ -427,11 +429,58 @@ function setupRounds(size) {
   choice2.style.backgroundColor = lineup[1].getAlbum().getBackgroundColor();
   choice1.style.color = lineup[0].getAlbum().getTextColor();
   choice2.style.color = lineup[1].getAlbum().getTextColor();
+  choice1.onclick = function() { advanceRound(0, size, LEVELS); };
+  choice2.onclick = function() { advanceRound(1, size, LEVELS); };
 
   document.getElementById("select").prepend(choice2);
   document.getElementById("select").prepend(or);
   document.getElementById("select").prepend(choice1);
   document.getElementById("select").prepend(roundTitle);
+}
+
+function advanceRound(choice, size, levels) {
+  if (choice == 0) {
+    lineup.splice(currentSelection + 1, 1); //starting from current selection + 1, remove 1 element, thus keeping the first element
+  }
+  else if (choice == 1) {
+    lineup.splice(currentSelection, 1); //starting from current selection, remove 1 element, thus keeping the second element
+  }
+  if(currentRound >= levels) {
+    finishRounds();
+    return;
+  }
+  else if (currentSelection + 1 >= (size / Math.pow(2, currentRound - 1)) / 2) {
+    currentSelection = 0;
+    currentRound++;
+    let roundTitleText;
+    switch(currentRound) {
+      case levels: roundTitleText = "FINAL ROUND";
+      break;
+      case levels - 1: roundTitleText = "SEMI FINALS";
+      break;
+      case levels - 2: roundTitleText = "QTR FINALS";
+      break;
+      default: roundTitleText = "ROUND " + currentRound;
+      break;
+    }
+    document.getElementById('roundTitle').innerHTML = roundTitleText;
+  }
+  else {
+    currentSelection++;
+  }
+  let choice1 = document.getElementById("songChoiceButton1");
+  let choice2 = document.getElementById("songChoiceButton2");
+
+  choice1.innerHTML = lineup[currentSelection].getName();
+  choice2.innerHTML = lineup[currentSelection+1].getName();
+  choice1.style.backgroundColor = lineup[currentSelection].getAlbum().getBackgroundColor();
+  choice2.style.backgroundColor = lineup[currentSelection+1].getAlbum().getBackgroundColor();
+  choice1.style.color = lineup[currentSelection].getAlbum().getTextColor();
+  choice2.style.color = lineup[currentSelection+1].getAlbum().getTextColor();
+}
+
+function finishRounds() {
+
 }
 
 function generateBracket(size) {
