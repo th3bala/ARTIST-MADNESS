@@ -24,8 +24,11 @@ class Album {
   }
 }
 
+//global variables
 var whitelist = [];
 var blacklist = [];
+var lineup = [];
+var currentRound = 1;
 
 function loadLists() {
   var tcd = new Album("#411218", "#e8982e");
@@ -383,17 +386,52 @@ function restart() {
   generateButton.innerText = 'GENERATE BRACKET';
   loadBracket(64);
   generateButton.onclick = function() { generateBracket(64); };
-  document.getElementById('titles').style.visibility = "visible";
-  document.getElementById('lists').style.visibility = "visible";
+  document.getElementById('titles').style.display = "flex";
+  document.getElementById('lists').style.display = "flex";
+  document.getElementById('roundTitle').remove();
+  document.getElementById('or').remove();
+  document.getElementById('songChoiceButton1').remove();
+  document.getElementById('songChoiceButton2').remove();
+  currentRound = 1;
 }
 
-function setupRounds() {
+function setupRounds(size) {
   let generateButton = document.getElementById('generateButton');
   generateButton.id = "restartButton";
   generateButton.innerText = 'RESTART';
   generateButton.onclick = function() { restart(); };
-  document.getElementById('titles').style.visibility = "hidden";
-  document.getElementById('lists').style.visibility = "hidden";
+  document.getElementById('titles').style.display = "none";
+  document.getElementById('lists').style.display = "none";
+
+  var LEVELS = Math.log(size, 2);
+
+  let roundTitle = document.createElement("H2");
+  roundTitle.className = "roundInfo";
+  roundTitle.id = "roundTitle";
+  roundTitle.innerHTML = "ROUND " + currentRound;
+
+  let or = document.createElement("H2");
+  or.className = "roundInfo";
+  or.id = "or";
+  or.innerHTML = "OR";
+
+  let choice1 = document.createElement("BUTTON");
+  let choice2 = document.createElement("BUTTON");
+  choice1.className = "songChoiceButton";
+  choice2.className = "songChoiceButton";
+  choice1.id = "songChoiceButton1";
+  choice2.id = "songChoiceButton2";
+  choice1.innerHTML = lineup[0].getName();
+  choice2.innerHTML = lineup[1].getName();
+  choice1.style.backgroundColor = lineup[0].getAlbum().getBackgroundColor();
+  choice2.style.backgroundColor = lineup[1].getAlbum().getBackgroundColor();
+  choice1.style.color = lineup[0].getAlbum().getTextColor();
+  choice2.style.color = lineup[1].getAlbum().getTextColor();
+
+  document.getElementById("select").prepend(choice2);
+  document.getElementById("select").prepend(or);
+  document.getElementById("select").prepend(choice1);
+  document.getElementById("select").prepend(roundTitle);
 }
 
 function generateBracket(size) {
@@ -401,7 +439,7 @@ function generateBracket(size) {
   context = canvas.getContext('2d');
 
   //get 64 random tracks from the whitelist
-  let lineup = shuffle(whitelist);
+  lineup = shuffle(whitelist);
   lineup = lineup.slice(0,64);
 
   var x = 0;
@@ -429,7 +467,7 @@ function generateBracket(size) {
     }
   });
 
-  setupRounds();
+  setupRounds(size);
 }
 
 function saveBracket() {
