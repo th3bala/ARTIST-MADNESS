@@ -30,6 +30,7 @@ var blacklist = [];
 var lineup = [];
 var currentRound = 1;
 var currentSelection = 0;
+var HORIZONTAL_LINE_LENGTH = 165;
 
 function loadLists() {
   var tcd = new Album("#411218", "#e8982e");
@@ -321,7 +322,6 @@ function loadBracket(size) {
   var initialY = 20;
   var x = initialX;
   var y = initialY;
-  var HORIZONTAL_LINE_LENGTH = 165;
   var LEVELS = Math.log2(size);
   var leftHalf = true;
   var verticalLineGap = 33;
@@ -423,12 +423,7 @@ function setupRounds(size) {
   choice2.className = "songChoiceButton";
   choice1.id = "songChoiceButton1";
   choice2.id = "songChoiceButton2";
-  choice1.innerHTML = lineup[0].getName();
-  choice2.innerHTML = lineup[1].getName();
-  choice1.style.backgroundColor = lineup[0].getAlbum().getBackgroundColor();
-  choice2.style.backgroundColor = lineup[1].getAlbum().getBackgroundColor();
-  choice1.style.color = lineup[0].getAlbum().getTextColor();
-  choice2.style.color = lineup[1].getAlbum().getTextColor();
+  updateSelectionButtons(choice1, choice2);
   choice1.onclick = function() { advanceRound(0, size, LEVELS); };
   choice2.onclick = function() { advanceRound(1, size, LEVELS); };
 
@@ -439,17 +434,42 @@ function setupRounds(size) {
 }
 
 function advanceRound(choice, size, levels) {
+  let x = 15;
+  let y = 0;
+  var verticalLineGap = 33;
+  verticalLineGap = verticalLineGap * Math.pow(2, currentRound);
+  var currentSize = (size / Math.pow(2, currentRound - 1));
+  x = x + HORIZONTAL_LINE_LENGTH * currentRound;
+  y = y + (verticalLineGap/2) + (currentSelection * verticalLineGap);
+
+  if(currentSelection >= currentSize / 4) {
+    x = 1740 - HORIZONTAL_LINE_LENGTH * currentRound;
+    y = (verticalLineGap/2) + ((currentSelection - (currentSize / 4)) * verticalLineGap);
+  }
   if (choice == 0) {
     lineup.splice(currentSelection + 1, 1); //starting from current selection + 1, remove 1 element, thus keeping the first element
   }
   else if (choice == 1) {
     lineup.splice(currentSelection, 1); //starting from current selection, remove 1 element, thus keeping the second element
   }
+  let selectedTrack = lineup[currentSelection];
+  var canvas = document.getElementById('bracket'),
+  context = canvas.getContext('2d');
+
+  context.beginPath();
+  context.fillStyle = selectedTrack.getAlbum().getBackgroundColor();
+  context.rect(x, y, 170, 28);
+  context.fill();
+
+  context.fillStyle = selectedTrack.getAlbum().getTextColor();
+  context.font = "16px Arial";
+  context.fillText(selectedTrack.getName(), x + 5, y + 20);
+
   if(currentRound >= levels) {
     finishRounds();
     return;
   }
-  else if (currentSelection + 1 >= (size / Math.pow(2, currentRound - 1)) / 2) {
+  else if (currentSelection + 1 >= currentSize / 2) {
     currentSelection = 0;
     currentRound++;
     let roundTitleText;
@@ -470,7 +490,10 @@ function advanceRound(choice, size, levels) {
   }
   let choice1 = document.getElementById("songChoiceButton1");
   let choice2 = document.getElementById("songChoiceButton2");
+  updateSelectionButtons(choice1, choice2);
+}
 
+function updateSelectionButtons(choice1, choice2) {
   choice1.innerHTML = lineup[currentSelection].getName();
   choice2.innerHTML = lineup[currentSelection+1].getName();
   choice1.style.backgroundColor = lineup[currentSelection].getAlbum().getBackgroundColor();
@@ -486,7 +509,6 @@ function finishRounds() {
 function generateBracket(size) {
   var canvas = document.getElementById('bracket'),
   context = canvas.getContext('2d');
-
   //get 64 random tracks from the whitelist
   lineup = shuffle(whitelist);
   lineup = lineup.slice(0,64);
