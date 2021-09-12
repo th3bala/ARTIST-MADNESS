@@ -38,12 +38,11 @@ function loadLists(artist) {
    return response.json();
   })
   .then(artData => {
-    const artDataObj = JSON.parse(JSON.stringify(artData));
     let artistDataObj;
     switch (artist) {
-      case "KANYE": artistDataObj = artDataObj.KANYE;
+      case "KANYE": artistDataObj = artData.KANYE;
       break;
-      case "DRAKE": artistDataObj = artDataObj.DRAKE;
+      case "DRAKE": artistDataObj = artData.DRAKE;
       break;
     }
     artistDataObj.albums.forEach((album) => {
@@ -131,7 +130,7 @@ function createBlacklistButton(item) {
   return songButton;
 }
 
-function loadBracket(size) {
+function loadBracket(artist, size) {
   var canvas = document.getElementById('bracket');
   var canvasStyle = getComputedStyle(canvas);
   context = canvas.getContext('2d');
@@ -150,7 +149,13 @@ function loadBracket(size) {
   context.fill();
 
   middle_image = new Image();
-  middle_image.src = 'images/kanyemadnesslogo0.png';
+  switch (artist) {
+    case "KANYE": middle_image.src = 'images/kanyemadnesslogo' + Math.floor(Math.random() * 2) + '.png'
+    break;
+    case "DRAKE": middle_image.src = 'images/kanyemadnesslogo0.png';
+    break;
+  }
+
   middle_image.onload = function() {
     context.drawImage(middle_image, 710, 290);
     context.fillStyle = "#ffffff";
@@ -202,12 +207,12 @@ function loadBracket(size) {
   }
 }
 
-function restart() {
+function restart(artist) {
   let generateButton = document.getElementById('restartButton');
   generateButton.id = "generateButton";
   generateButton.innerText = 'GENERATE BRACKET';
-  loadBracket(64);
-  generateButton.onclick = function() { generateBracket(64); };
+  loadBracket(artist, 64);
+  generateButton.onclick = function() { generateBracket(artist, 64); };
   document.getElementById('titles').style.display = "flex";
   document.getElementById('lists').style.display = "flex";
 
@@ -224,11 +229,11 @@ function restart() {
   currentSelection = 0;
 }
 
-function setupRounds(size) {
+function setupRounds(artist, size) {
   let generateButton = document.getElementById('generateButton');
   generateButton.id = "restartButton";
   generateButton.innerText = 'RESTART';
-  generateButton.onclick = function() { restart(); };
+  generateButton.onclick = function() { restart(artist); };
   document.getElementById('titles').style.display = "none";
   document.getElementById('lists').style.display = "none";
 
@@ -373,7 +378,7 @@ function finishRounds() {
   //hide button
 }
 
-function generateBracket(size) {
+function generateBracket(artist, size) {
   var canvas = document.getElementById('bracket'),
   context = canvas.getContext('2d');
   //get 64 random tracks from the whitelist
@@ -415,7 +420,7 @@ function generateBracket(size) {
     }
   });
 
-  setupRounds(size);
+  setupRounds(artist, size);
 }
 
 function saveBracket() {

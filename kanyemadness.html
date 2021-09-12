@@ -9,9 +9,18 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+		<link rel="manifest" href="images/site.webmanifest">
+		<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="images/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body onload="loadLists('KANYE');
-								loadBracket(64);">
+								loadBracket('KANYE', 64);">
 		<div id = columnContainer>
 			<div class = "cols" id = "col1">
 				<div id = "madnessType">
@@ -28,7 +37,7 @@
 						<div class = "tracklist" id = "blacklist"></div>
 					</div>
 					<div id = buttons>
-						<button type = "submit" onclick = "generateBracket(64)" class = "omniButton" id = "generateButton">GENERATE BRACKET</button>
+						<button type = "submit" onclick = "generateBracket('KANYE', 64)" class = "omniButton" id = "generateButton">GENERATE BRACKET</button>
 						<button type = "submit" onclick = "saveBracket()" class = "omniButton" id = "saveButton">SAVE BRACKET</button>
 					</div>
 				</div>
