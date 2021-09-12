@@ -319,7 +319,7 @@ function loadBracket(size) {
   var canvasStyle = getComputedStyle(canvas);
   context = canvas.getContext('2d');
   var initialX = 15;
-  var initialY = 20;
+  var initialY = 19;
   var x = initialX;
   var y = initialY;
   var LEVELS = Math.log2(size);
@@ -327,15 +327,19 @@ function loadBracket(size) {
   var verticalLineGap = 33;
   var currentSize = size;
 
-  //base_image = new Image();
-  //base_image.src = 'images/pablobrackettemplate.png';
-  //base_image.onload = function(){
-  //context.drawImage(base_image, 0, 0);
-
   context.beginPath();
   context.fillStyle = "#ffffff";
   context.rect(0, 0, canvas.width, canvas.height);
   context.fill();
+
+  middle_image = new Image();
+  middle_image.src = 'images/kanyemadnesslogo0.png';
+  middle_image.onload = function() {
+    context.drawImage(middle_image, 710, 290);
+    context.fillStyle = "#ffffff";
+    context.rect(776, 476, 368, 68);
+    context.fill();
+  }
 
   context.fillStyle = "#000000";
   context.font = "44px Work Sans";
@@ -389,10 +393,16 @@ function restart() {
   generateButton.onclick = function() { generateBracket(64); };
   document.getElementById('titles').style.display = "flex";
   document.getElementById('lists').style.display = "flex";
+
+  let elementsToRemove = [];
   document.getElementById('roundTitle').remove();
-  document.getElementById('or').remove();
-  document.getElementById('songChoiceButton1').remove();
-  document.getElementById('songChoiceButton2').remove();
+  elementsToRemove.push(document.getElementById('or'));
+  elementsToRemove.push(document.getElementById('songChoiceButton1'));
+  elementsToRemove.push(document.getElementById('songChoiceButton2'));
+  elementsToRemove.forEach((element) => {
+    if(element != null)
+      element.remove();
+  });
   currentRound = 1;
   currentSelection = 0;
 }
@@ -435,16 +445,18 @@ function setupRounds(size) {
 
 function advanceRound(choice, size, levels) {
   let x = 15;
-  let y = 0;
+  let y = -13;
   var verticalLineGap = 33;
   verticalLineGap = verticalLineGap * Math.pow(2, currentRound);
   var currentSize = (size / Math.pow(2, currentRound - 1));
   x = x + HORIZONTAL_LINE_LENGTH * currentRound;
   y = y + (verticalLineGap/2) + (currentSelection * verticalLineGap);
+  let choice1 = document.getElementById("songChoiceButton1");
+  let choice2 = document.getElementById("songChoiceButton2");
 
   if(currentSelection >= currentSize / 4) {
     x = 1740 - HORIZONTAL_LINE_LENGTH * currentRound;
-    y = (verticalLineGap/2) + ((currentSelection - (currentSize / 4)) * verticalLineGap);
+    y = (verticalLineGap/2) + ((currentSelection - (currentSize / 4)) * verticalLineGap) - 13;
   }
   if (choice == 0) {
     lineup.splice(currentSelection + 1, 1); //starting from current selection + 1, remove 1 element, thus keeping the first element
@@ -455,17 +467,57 @@ function advanceRound(choice, size, levels) {
   let selectedTrack = lineup[currentSelection];
   var canvas = document.getElementById('bracket'),
   context = canvas.getContext('2d');
-
   context.beginPath();
   context.fillStyle = selectedTrack.getAlbum().getBackgroundColor();
-  context.rect(x, y, 170, 28);
-  context.fill();
+  if(currentRound < levels-1) {
+    context.rect(x, y, 170, 28);
+    context.fill();
 
-  context.fillStyle = selectedTrack.getAlbum().getTextColor();
-  context.font = "16px Arial";
-  context.fillText(selectedTrack.getName(), x + 5, y + 20);
+    context.fillStyle = selectedTrack.getAlbum().getTextColor();
+    context.font = "16px Work Sans";
+    context.fillText(selectedTrack.getName(), x + 5, y + 20);
+  }
+  else if(lineup.length == 3) {
+    context.rect(750, 580, 170, 28);
+    context.fill();
 
+    context.fillStyle = selectedTrack.getAlbum().getTextColor();
+    context.font = "16px Work Sans";
+    context.fillText(selectedTrack.getName(), 755, 600);
+  }
+  else if(lineup.length == 2) {
+    context.rect(1010, 580, 170, 28);
+    context.fill();
+
+    context.fillStyle = selectedTrack.getAlbum().getTextColor();
+    context.font = "16px Work Sans";
+    context.fillText(selectedTrack.getName(), 1015, 600);
+  }
+  else if(lineup.length == 1) { //Champion
+    context.rect(780, 480, 360, 60);
+    context.fill();
+
+    context.font = "30px Work Sans";
+    var metrics = context.measureText(selectedTrack.getName().toUpperCase());
+    var scalex = (360 / metrics.width);
+    var scaley = 2;
+    context.save();
+    context.scale(scalex, scaley);
+    context.fillStyle = selectedTrack.getAlbum().getTextColor();
+    context.fillText(selectedTrack.getName().toUpperCase(), 780/scalex, 530/scaley);
+    context.restore();
+  }
   if(currentRound >= levels) {
+    if(choice == 0) {
+      choice2.remove();
+      choice1.onclick = "";
+    }
+    else if (choice == 1) {
+      choice1.remove();
+      choice2.onclick = "";
+    }
+    document.getElementById('roundTitle').innerHTML = "CHAMPION";
+    document.getElementById('or').remove();
     finishRounds();
     return;
   }
@@ -488,8 +540,6 @@ function advanceRound(choice, size, levels) {
   else {
     currentSelection++;
   }
-  let choice1 = document.getElementById("songChoiceButton1");
-  let choice2 = document.getElementById("songChoiceButton2");
   updateSelectionButtons(choice1, choice2);
 }
 
@@ -503,7 +553,7 @@ function updateSelectionButtons(choice1, choice2) {
 }
 
 function finishRounds() {
-
+  //hide button
 }
 
 function generateBracket(size) {
@@ -525,7 +575,7 @@ function generateBracket(size) {
     context.fill();
 
     context.fillStyle = song.getAlbum().getTextColor();
-    context.font = "16px Arial";
+    context.font = "16px Work Sans";
     context.fillText(song.getName(), x + 5, y + 20);
 
     songCount++;
