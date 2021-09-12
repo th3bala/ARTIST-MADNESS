@@ -43,6 +43,8 @@ function loadLists(artist) {
     switch (artist) {
       case "KANYE": artistDataObj = artDataObj.KANYE;
       break;
+      case "DRAKE": artistDataObj = artDataObj.DRAKE;
+      break;
     }
     artistDataObj.albums.forEach((album) => {
       let albumObj = new Album(album.bgColor, album.fgColor);
@@ -65,6 +67,9 @@ function loadLists(artist) {
 }
 
 function remove(name) {
+
+  if(whitelist.length == 64) return; //refuse to allow the whitelist to go below 64 songs
+
   whitelist.find((t,i) => {
     if(t.name === name) {
       //Remove it from the whitelist
@@ -388,8 +393,18 @@ function generateBracket(size) {
 
     context.fillStyle = song.getAlbum().getTextColor();
     context.font = "16px Work Sans";
-    context.fillText(song.getName(), x + 5, y + 20);
+    let textLength = context.measureText(song.getName()).width;
 
+    if(textLength > 165){ //if the text is overflowing out of its background rectangle, scrunch it down
+      var scalex = (160 / textLength);
+      context.save();
+      context.scale(scalex, 1);
+      context.fillText(song.getName(), (x+5)/scalex, y + 20);
+      context.restore();
+    }
+    else { //text is not overflowing
+      context.fillText(song.getName(), x + 5, y + 20);
+    }
     songCount++;
     y += 33;
 
