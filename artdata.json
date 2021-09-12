@@ -1,0 +1,351 @@
+{
+  "KANYE": {
+    "albums": [
+      {
+        "albumNum": 0,
+        "albumName": "Dropout",
+        "bgColor": "#411218",
+        "fgColor": "#e8982e",
+        "songs": [
+          "We Don't Care",
+          "All Falls Down",
+          "Spaceship",
+          "Jesus Walks",
+          "Never Let Me Down",
+          "Get Em High",
+          "The New Workout Plan",
+          "Slow Jamz",
+          "Breathe In Breathe Out",
+          "School Spirit",
+          "Two Words",
+          "Through The Wire",
+          "Family Business",
+          "Last Call"
+        ],
+        "blacklistSongs": []
+      },
+      {
+        "albumNum": 1,
+        "albumName": "Registration",
+        "bgColor": "#000000",
+        "fgColor": "#caaf09",
+        "songs": [
+          "Heard 'Em Say",
+          "Touch The Sky",
+          "Gold Digger",
+          "Drive Slow",
+          "My Way Home",
+          "Crack Music",
+          "Roses",
+          "Bring Me Down",
+          "Addiction",
+          "Diamonds (Remix)",
+          "We Major",
+          "Hey Mama",
+          "Celebration",
+          "Gone",
+          "Diamonds (Solo)",
+          "Late"
+        ],
+        "blacklistSongs": [
+          "Back To Basics",
+          "We Can Make It Better"
+        ]
+      },
+      {
+        "albumNum": 2,
+        "albumName": "Commencement",
+        "bgColor": "#853082",
+        "fgColor": "#dcd9b6",
+        "songs": [
+          "Good Morning",
+          "Champion",
+          "Stronger",
+          "I Wonder",
+          "Good Life",
+          "Can't Tell Me Nothing",
+          "Barry Bonds",
+          "Drunk and Hot Girls",
+          "Flashing Lights",
+          "Everything I Am",
+          "The Glory",
+          "Homecoming",
+          "Big Brother"
+        ],
+        "blacklistSongs": [
+          "Good Night",
+          "Bittersweet Poetry"
+        ]
+      },
+      {
+        "albumNum": 3,
+        "albumName": "Heartbreak",
+        "bgColor": "#c2cece",
+        "fgColor": "#b72124",
+        "songs": [
+          "Say You Will",
+          "Welcome to Heartbreak",
+          "Heartless",
+          "Amazing",
+          "Love Lockdown",
+          "Paranoid",
+          "RoboCop",
+          "Street Lights",
+          "Bad News",
+          "See You in My Nightmares",
+          "Coldest Winter",
+          "Pinocchio Story"
+        ],
+        "blacklistSongs": []
+      },
+      {
+        "albumNum": 4,
+        "albumName": "Fantasy",
+        "bgColor": "#ed2140",
+        "fgColor": "#e0af70",
+        "songs": [
+          "Dark Fantasy",
+          "Gorgeous",
+          "POWER",
+          "All of the Lights",
+          "Monster",
+          "So Appalled",
+          "Devil in a New Dress",
+          "Runaway",
+          "Hell of a Life",
+          "Blame Game",
+          "Lost in the World"
+        ],
+        "blacklistSongs": [
+          "See Me Now"
+        ]
+      },
+      {
+        "albumNum": 5,
+        "albumName": "Throne",
+        "bgColor": "#ae874c",
+        "fgColor": "#000000",
+        "songs": [
+          "No Church in the Wild",
+          "Lift Off",
+          "Ni**as in Paris",
+          "Otis",
+          "Gotta Have It",
+          "New Day",
+          "That's My Bitch",
+          "Welcome to the Jungle",
+          "Who Gon Stop Me",
+          "Murder to Excellence",
+          "Made in America",
+          "Why I Love You",
+          "Illest Motherfucker Alive",
+          "H.A.M",
+          "Primetime",
+          "The Joy"
+        ],
+        "blacklistSongs": []
+      },
+      {
+        "albumNum": 6,
+        "albumName": "Summer",
+        "bgColor": "#efefef",
+        "fgColor": "#3a3a3a",
+        "songs": [
+          "To The World",
+          "Clique",
+          "Mercy",
+          "New God Flow",
+          "The Morning",
+          "Cold",
+          "The One",
+          "I Don't Like"
+        ],
+        "blacklistSongs": []
+      },
+      {
+        "albumNum": 7,
+        "albumName": "Yee",
+        "bgColor": "#ed2c18",
+        "fgColor": "#ffffff",
+        "songs": [
+          "On Sight",
+          "Black Skinhead",
+          "I Am a God",
+          "New Slaves",
+          "Hold My Liquor",
+          "I'm In It",
+          "Blood on the Leaves",
+          "Guilt Trip",
+          "Send It Up",
+          "Bound 2"
+        ],
+        "blacklistSongs": []
+      },
+      {
+        "albumNum": 8,
+        "albumName": "Pablo",
+        "bgColor": "#f58b57",
+        "fgColor": "#000000",
+        "songs": [
+          "Ultralight Beam",
+          "FSMH Pt. 1",
+          "Pt. 2",
+          "Famous",
+          "Feedback",
+          "Highlights",
+          "Freestyle 4",
+          "Waves",
+          "FML",
+          "Real Friends",
+          "Wolves",
+          "30 Hours",
+          "No More Parties in LA",
+          "Facts",
+          "Fade",
+          "Saint Pablo"
+        ],
+        "blacklistSongs": []
+      },
+      {
+        "albumNum": 9,
+        "albumName": "SelfTitled",
+        "bgColor": "#5c81ae",
+        "fgColor": "#2cea4c",
+        "songs": [
+          "I Thought About Killing You",
+          "Yikes",
+          "All Mine",
+          "Wouldn't Leave",
+          "No Mistakes",
+          "Ghost Town",
+          "Violent Crimes"
+        ],
+        "blacklistSongs": []
+      },
+      {
+        "albumNum": 10,
+        "albumName": "Ghosts",
+        "bgColor": "#ea5e8d",
+        "fgColor": "#014e8a",
+        "songs": [
+          "Feel the Love",
+          "Fire",
+          "4th Dimension",
+          "Freeee",
+          "Reborn",
+          "Kids See Ghosts",
+          "Cudi Montage"
+        ],
+        "blacklistSongs": []
+      },
+      {
+        "albumNum": 11,
+        "albumName": "JesusIsAnHonoredServantOfGod",
+        "bgColor": "#0000ff",
+        "fgColor": "#fdeb3f",
+        "songs": [
+          "Selah",
+          "Follow God",
+          "Closed On Sunday",
+          "On God",
+          "Everything We Need",
+          "Water",
+          "God Is",
+          "Hands On",
+          "Use This Gospel",
+          "Jesus Is Lord"
+        ],
+        "blacklistSongs": []
+      },
+      {
+        "albumNum": 12,
+        "albumName": "Mother",
+        "bgColor": "#000000",
+        "fgColor": "#ffffff",
+        "songs": [
+          "Jail",
+          "God Breathed",
+          "Off The Grid",
+          "Hurricane",
+          "Praise God",
+          "Jonah",
+          "Ok Ok",
+          "Junya",
+          "Believe What I Say",
+          "24",
+          "Remote Control",
+          "Moon",
+          "Heaven and Hell",
+          "Donda",
+          "Keep My Spirit Alive",
+          "Jesus Lord",
+          "New Again",
+          "Lord I Need You",
+          "Pure Souls",
+          "Come to Life",
+          "No Child Left Behind"
+        ],
+        "blacklistSongs": [
+          "Jail pt 2",
+          "Ok Ok pt 2",
+          "Junya pt 2",
+          "Jesus Lord pt 2"
+        ]
+      },
+      {
+        "albumNum": 13,
+        "albumName": "Singles2010",
+        "bgColor": "#181713",
+        "fgColor": "#d9352c",
+        "songs": [],
+        "blacklistSongs": [
+          "POWER (Remix)",
+          "G.O.O.D Friday",
+          "Lord Lord Lord",
+          "Christian Dior Denim Flow",
+          "Don't Stop!",
+          "Take One for the Team",
+          "Don't Look Down",
+          "Looking for Trouble",
+          "Chain Heavy",
+          "Christmas in Harlem"
+        ]
+      },
+      {
+        "albumNum": 14,
+        "albumName": "Singles2015",
+        "bgColor": "#000000",
+        "fgColor": "#ffffff",
+        "songs": [],
+        "blacklistSongs": [
+          "Only One",
+          "FourFiveSeconds",
+          "All Day"
+        ]
+      },
+      {
+        "albumNum": 15,
+        "albumName": "Singles2018",
+        "bgColor": "#ff69b4",
+        "fgColor": "#000000",
+        "songs": [],
+        "blacklistSongs": [
+          "XTCY",
+          "I Love It",
+          "Ye vs. the People",
+          "Lift Yourself"
+        ]
+      },
+      {
+        "albumNum": 16,
+        "albumName": "Lamb",
+        "bgColor": "#2b201e",
+        "fgColor": "#dddcda",
+        "songs": [],
+        "blacklistSongs": [
+          "Wash Us In The Blood"
+        ]
+      }
+    ]
+  }
+}
