@@ -364,7 +364,7 @@
         "albumNum": 0,
         "albumName": "Gone",
         "bgColor": "#000000",
-        "fgColor": "#ff0000",
+        "fgColor": "#fc3246",
         "songs": [
           "Lust For Life",
           "Houstatlantavegas",
@@ -391,7 +391,7 @@
         "albumNum": 1,
         "albumName": "GoneEP",
         "bgColor": "#000000",
-        "fgColor": "#ff0000",
+        "fgColor": "#fc3246",
         "songs": [
           "I'm Goin In",
           "Fear"
