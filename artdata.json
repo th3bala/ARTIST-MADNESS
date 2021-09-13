@@ -345,10 +345,141 @@
         "blacklistSongs": [
           "Wash Us In The Blood"
         ]
+      },
+      {
+        "albumNum": 17,
+        "albumName": "Nah3X",
+        "bgColor": "#fe167a",
+        "fgColor": "#e6b211",
+        "songs": [],
+        "blacklistSongs": [
+          "Nah Nah Nah"
+        ]
       }
     ]
   },
-  "DRAKE": {
-    "albums": []
+  "DRIZZY": {
+    "albums": [
+      {
+        "albumNum": 0,
+        "albumName": "Gone",
+        "bgColor": "#000000",
+        "fgColor": "#ff0000",
+        "songs": [
+          "Lust For Life",
+          "Houstatlantavegas",
+          "Successful",
+          "Let's Call It Off",
+          "November 18th",
+          "Ignant Shit",
+          "A Night Off",
+          "Say What's Real",
+          "Little Bit",
+          "Best I Ever Had",
+          "Unstoppable",
+          "Uptown",
+          "Sooner Than Later",
+          "Bria's Interlude",
+          "The Calm",
+          "Brand New",
+          "Congratulations"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 1,
+        "albumName": "GoneEP",
+        "bgColor": "#000000",
+        "fgColor": "#ff0000",
+        "songs": [
+          "I'm Goin In",
+          "Fear"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 2,
+        "albumName": "Later",
+        "bgColor": "#ffffff",
+        "fgColor": "#ad0104",
+        "songs": [
+          "Fireworks",
+          "Karaoke",
+          "The Resistance",
+          "Over",
+          "Show Me a Good Time",
+          "Up All Night",
+          "Fancy",
+          "Shut It Down",
+          "Unforgettable",
+          "Light Up",
+          "Miss Me",
+          "Cece's Interlude",
+          "Find Your Love",
+          "Thank Me Now",
+          "9AM in Dallas"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 3,
+        "albumName": "Care",
+        "bgColor": "#221010",
+        "fgColor": "#c09c5e",
+        "songs": [
+          "Over My Dead Body",
+          "Shot For Me",
+          "Headlines",
+          "Crew Love",
+          "Take Care",
+          "Marvins Room",
+          "Buried Alive Interlude",
+          "Under Ground Kings",
+          "We'll Be Fine",
+          "Make Me Proud",
+          "Lord Knows",
+          "Cameras/Good Ones Go",
+          "Doing It Wrong",
+          "The Real Her",
+          "Look What You've Done",
+          "HYFR",
+          "Practice",
+          "The Ride",
+          "The Motto",
+          "Hate Sleeping Alone"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 4,
+        "albumName": "Nothing",
+        "bgColor": "#0064b2",
+        "fgColor": "#ffffff",
+        "songs": [
+          "Tuscan Leather",
+          "Furthest Thing",
+          "Started From The Bottom",
+          "Wu-Tang Forever",
+          "Own It",
+          "Worst Behavior",
+          "From Time",
+          "Hold On, We're Going Home",
+          "Connect",
+          "The Language",
+          "305 To My City",
+          "Too Much",
+          "Pound Cake/Paris Morton",
+          "Come Thru",
+          "All Me",
+          "The Motion"
+        ],
+        "blacklistSongs": [
+        ]
+      }
+    ]
   }
 }

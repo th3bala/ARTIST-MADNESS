@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 	 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href= "drakestyle.css">
+		<link rel="stylesheet" href= "drizzystyle.css">
 		<script src="script.js"></script>
-		<title>DRAKE MADNESS</title>
+		<title>DRIZZY MADNESS</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
@@ -17,17 +17,17 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 	</head>
-	<body onload="loadLists('DRAKE');
-								loadBracket('DRAKE', 64);">
+	<body onload="loadLists('DRIZZY');
+								loadBracket('DRIZZY', 64);">
 		<div id = columnContainer>
 			<div class = "cols" id = "col1">
 				<div id = "madnessType">
-					<h1>DRAKE MADNESS</h1>
-					<h5>BRACKET GENERATOR</h5>
+					<img id = "drizzyMadness" src = "images/drizzymadnesstext.png">
+					<img id = "bracketGenerator" src = "images/drizzybracketgeneratortext.png">
 				</div>
 				<div id = "select">
 					<div id = "titles">
-						<h6>INCLUDE &#128156;</h6>
+						<h6>INCLUDE &#x1f930;</h6>
 						<h6>EXCLUDE &#x1F6AB;</h6>
 					</div>
 					<div id = "lists">
@@ -35,7 +35,7 @@
 						<div class = "tracklist" id = "blacklist"></div>
 					</div>
 					<div id = buttons>
-						<button type = "submit" onclick = "generateBracket('DRAKE', 64)" class = "omniButton" id = "generateButton">GENERATE BRACKET</button>
+						<button type = "submit" onclick = "generateBracket('DRIZZY', 64)" class = "omniButton" id = "generateButton">GENERATE BRACKET</button>
 						<button type = "submit" onclick = "saveBracket()" class = "omniButton" id = "saveButton">SAVE BRACKET</button>
 					</div>
 				</div>

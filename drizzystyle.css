@@ -16,17 +16,15 @@
 		flex: 1 2 98%;
 		margin: 0;
 	}
-	h1 {
-		margin: 0;
-		text-align: center;
-		font-family: Arial, sans-serif;
-		font-size: 2.2em;
+	#drizzyMadness {
+		flex: 1 1 auto;
+		width: 20em;
+		align-self: center;
 	}
-	h5{
-		margin: 0;
-		text-align: center;
-		font-family: Arial, sans-serif;
-		font-size:1em;
+	#bracketGenerator {
+		flex: 1 1 auto;
+		width: 15em;
+		align-self: center;
 	}
 	.tracklist{
 		overflow: hidden;
@@ -47,6 +45,9 @@
 	#madnessType {
 		flex: 1 1 20%;
 		margin: 0 0 .5em 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 	#whitelist div:hover{
 		border: 3px solid red;
@@ -61,8 +62,8 @@
 	#titles h6 {
 		margin: 0;
 		text-align: center;
-		font-family: Arial, sans-serif;
-		font-size:.8em;
+		font-family: "Work Sans", sans-serif;
+		font-size:.9em;
 		flex: 1;
 		box-sizing: border-box;
 		padding: 2px;
@@ -90,6 +91,7 @@
 		display: flex;
 		flex-direction: column;
 		flex: 1 1 30%;
+		align-items: center;
 	}
 	#col2{
 		flex-direction: column;

@@ -42,7 +42,7 @@ function loadLists(artist) {
     switch (artist) {
       case "KANYE": artistDataObj = artData.KANYE;
       break;
-      case "DRAKE": artistDataObj = artData.DRAKE;
+      case "DRIZZY": artistDataObj = artData.DRIZZY;
       break;
     }
     artistDataObj.albums.forEach((album) => {
@@ -152,7 +152,7 @@ function loadBracket(artist, size) {
   switch (artist) {
     case "KANYE": middle_image.src = 'images/kanyemadnesslogo' + Math.floor(Math.random() * 2) + '.png'
     break;
-    case "DRAKE": middle_image.src = 'images/kanyemadnesslogo0.png';
+    case "DRIZZY": middle_image.src = 'images/drizzymadnesslogo0.png';
     break;
   }
 
