@@ -474,8 +474,61 @@
           "Too Much",
           "Pound Cake/Paris Morton",
           "Come Thru",
-          "All Me",
-          "The Motion"
+          "All Me"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 5,
+        "albumName": "Reading",
+        "bgColor": "#ffffff",
+        "fgColor": "#000000",
+        "songs": [
+          "Legend",
+          "Energy",
+          "10 Bands",
+          "Know Yourself",
+          "No Tellin'",
+          "Madonna",
+          "6 God",
+          "Star67",
+          "Preach",
+          "Wednesday Night Interlude",
+          "Used To",
+          "6 Man",
+          "Now & Forever",
+          "Company",
+          "You & The 6",
+          "Jungle",
+          "6PM in New York"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 6,
+        "albumName": "Package",
+        "bgColor": "#000000",
+        "fgColor": "#b3c5e1",
+        "songs": [
+          "Dreams Money Can Buy",
+          "The Motion",
+          "How Bout Now",
+          "Trust Issues",
+          "Days In The East",
+          "Draft Day",
+          "4pm in Calabasas",
+          "5am in Toronto",
+          "I Get Lonely",
+          "My Side",
+          "Jodeci Freestyle",
+          "Club Paradise",
+          "Free Spirit",
+          "Heat of the Moment",
+          "Girls Love Beyoncé",
+          "Paris Morton Music",
+          "Can I"
         ],
         "blacklistSongs": [
         ]
