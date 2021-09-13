@@ -1,7 +1,9 @@
 # ARTIST MADNESS
-A PLACE TO RANK THE WORK OF YOUR FAVORITE ARTISTS, THEN SHARE IT WITH THE WORLD.
+A place to rank the work of your favorite artists, then share it with the world.
 
-ARTIST MADNESS DOES NOT CLAIM ANY RIGHT OVER THE WORKS IT REFERENCES.
-ALL RIGHTS RESERVED TO THE RESPECTIVE COPYRIGHT OWNERS.
+Still under development. Thanks for being patient. Come back soon.
 
-STILL UNDER DEVELOPMENT. THANKS FOR BEING PATIENT. COME BACK SOON.
+Thank you to [@RealFavicon](https://twitter.com/RealFavicon) for the amazing favicon generator.
+
+ARTIST MADNESS does not claim any right over the works it references.
+All rights reserved to the respective copyright owners.
