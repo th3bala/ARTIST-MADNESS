@@ -720,6 +720,28 @@
         ],
         "blacklistSongs": [
         ]
+      },
+      {
+        "albumNum": 15,
+        "albumName": "Back2Back",
+        "bgColor": "#000000",
+        "fgColor": "#ffffff",
+        "songs": [
+          "Back to Back"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 16,
+        "albumName": "Charged",
+        "bgColor": "#000000",
+        "fgColor": "#5ece44",
+        "songs": [
+          "Charged Up"
+        ],
+        "blacklistSongs": [
+        ]
       }
     ]
   }
