@@ -16,7 +16,7 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 	</head>
-	<body>
+	<body onload = "getStats()">
     <h1>ARTIST MADNESS</h1>
     <h2>ABOUT</h2>
 		<p>A PLACE TO RANK THE WORK OF YOUR FAVORITE ARTISTS, THEN SHARE IT WITH THE WORLD.</p>
@@ -30,6 +30,21 @@
 		<br>
 		<h2>WHAT'S NEXT</h2>
 		<p>LINKS TO LISTEN TO THE SONGS ARE COMING SOON.</p>
+		<br>
+		<br>
+		<h2>STATS</h2>
+		<p id = "generations">? BRACKETS GENERATED</p>
+		<script>
+			function getStats() {
+				var xhr = new XMLHttpRequest();
+			  xhr.open("GET", "https://api.countapi.xyz/info/artistmadness.com/generations");
+			  xhr.responseType = "json";
+				xhr.onload = function() {
+	        document.getElementById("generations").innerHTML = this.response.value + " BRACKETS GENERATED";
+	    	}
+			  xhr.send();
+			}
+		</script>
 		<br>
 		<nav id = "footerNav">
 			<a class = "footerNavLink" href = "index.html">ARTIST MADNESS</a>

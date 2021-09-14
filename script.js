@@ -420,7 +420,15 @@ function generateBracket(artist, size) {
     }
   });
 
+  logGeneration();
   setupRounds(artist, size);
+}
+
+function logGeneration() { //Sends a request to countapi.xyz to log how many brackets have been generated.
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.countapi.xyz/hit/artistmadness.com/generations");
+  xhr.responseType = "json";
+  xhr.send();
 }
 
 function saveBracket() {
