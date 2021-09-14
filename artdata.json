@@ -472,7 +472,7 @@
           "The Language",
           "305 To My City",
           "Too Much",
-          "Pound Cake/Paris Morton",
+          "Pound Cake/Paris Morton Music 2",
           "Come Thru",
           "All Me"
         ],
@@ -508,6 +508,126 @@
       },
       {
         "albumNum": 6,
+        "albumName": "FromThe6",
+        "bgColor": "#242132",
+        "fgColor": "#c2cbcc",
+        "songs": [
+          "Keep The Family Close"
+          "9",
+          "U With Me?",
+          "Feel No Ways",
+          "Hype",
+          "Weston Road Flows",
+          "Redemption",
+          "With You",
+          "Faithful",
+          "Still Here",
+          "Controlla",
+          "One Dance",
+          "Grammys",
+          "Childs Play",
+          "Pop Style",
+          "Too Good",
+          "Summers Over Interlude",
+          "Fire & Desire",
+          "Views",
+          "Hotline Bling"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 7,
+        "albumName": "Life",
+        "bgColor": "#dbaf8a",
+        "fgColor": "#0e63a8",
+        "songs": [
+          "Free Smoke",
+          "No Long Talk",
+          "Passionfruit",
+          "Jorja Interlude",
+          "Get It Together",
+          "Madiba Riddim",
+          "Blem",
+          "4422",
+          "Gyalchester",
+          "Skepta Interlude",
+          "Portland",
+          "Sacrifices",
+          "Nothings Into Somethings",
+          "Teenage Fever",
+          "KMT",
+          "Lose You",
+          "Can't Have Everything",
+          "Glow",
+          "Since Way Back",
+          "Fake Love",
+          "Ice Melts",
+          "Do Not Disturb"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 8,
+        "albumName": "Scary1",
+        "bgColor": "#232323",
+        "fgColor": "#f92f49",
+        "songs": [
+          "Diplomatic Immunity"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 9,
+        "albumName": "Scorpion",
+        "bgColor": "#282828",
+        "fgColor": "#f8f8f8",
+        "songs": [
+          "Survival",
+          "Nonstop",
+          "Elevate",
+          "Emotionless",
+          "God's Plan",
+          "I'm Upset",
+          "8 Out Of 10",
+          "Mob Ties",
+          "Can't Take a Joke",
+          "Sandra's Rose",
+          "Talk Up",
+          "Is There More",
+          "Peak",
+          "Summer Games",
+          "Jaded",
+          "Nice For What",
+          "Finesse",
+          "Ratchet Happy Birthday",
+          "That's How You Feel",
+          "Blue Tint",
+          "In My Feelings",
+          "Don't Matter To Me",
+          "After Dark",
+          "Final Fantasy",
+          "March 14"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 10,
+        "albumName": "BestInTheWorld",
+        "bgColor": "#f2ed88",
+        "fgColor": "#c9101a",
+        "songs": [
+          "Omertà",
+          "Money in the Grave"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 11,
         "albumName": "Package",
         "bgColor": "#000000",
         "fgColor": "#b3c5e1",
@@ -519,7 +639,7 @@
           "Days In The East",
           "Draft Day",
           "4pm in Calabasas",
-          "5am in Toronto",
+          "5 AM in Toronto",
           "I Get Lonely",
           "My Side",
           "Jodeci Freestyle",
@@ -532,7 +652,75 @@
         ],
         "blacklistSongs": [
         ]
-      }
+      },
+      {
+        "albumNum": 12,
+        "albumName": "Dark Lane",
+        "bgColor": "#141507",
+        "fgColor": "#4d5212",
+        "songs": [
+          "Deep Pockets",
+          "When To Say When",
+          "Chicago Freestyle",
+          "Not You Too",
+          "Toosie Slide",
+          "Desires",
+          "Time Flies",
+          "Landed",
+          "D4L",
+          "Pain 1993",
+          "Losses",
+          "From Florida With Love",
+          "Demons",
+          "War"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 13,
+        "albumName": "Scary2",
+        "bgColor": "#111731",
+        "fgColor": "#97F8FE",
+        "songs": [
+          "What's Next",
+          "Wants and Needs",
+          "Lemon Pepper Freestyle"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 14,
+        "albumName": "Certified",
+        "bgColor": "#c586a5",
+        "fgColor": "#336274",
+        "songs": [
+          "Champagne Poetry",
+          "Papi's Home",
+          "Girls Want Girls",
+          "In The Bible",
+          "Love All",
+          "Fair Trade",
+          "Way 2 Sexy",
+          "TSU",
+          "N 2 Deep",
+          "Pipe Down",
+          "Yebba's Heartbreak",
+          "No Friends In The Industry",
+          "Knife Talk",
+          "7am on Bridle Path",
+          "Race My Mind",
+          "Fountains",
+          "Get Along Better",
+          "You Only Live Twice",
+          "IMY2",
+          "Fucking Fans",
+          "The Remorse"
+        ],
+        "blacklistSongs": [
+        ]
+      },
     ]
   }
 }
