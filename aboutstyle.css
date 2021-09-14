@@ -12,7 +12,11 @@ h1 {
   font-size: 1.2em;
   color: #e40000;
 }
-.madnessLink:hover {
+a {
+  color: #e40000;
+}
+a:hover {
+  text-decoration: none;
   color: white;
 }
 #footerNav {
