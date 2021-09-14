@@ -509,8 +509,8 @@
       {
         "albumNum": 6,
         "albumName": "FromThe6",
-        "bgColor": "#242132",
-        "fgColor": "#c2cbcc",
+        "bgColor": "#c2cbcc",
+        "fgColor": "#532629",
         "songs": [
           "Keep The Family Close",
           "9",
@@ -617,7 +617,7 @@
       {
         "albumNum": 10,
         "albumName": "BestInTheWorld",
-        "bgColor": "#f2ed88",
+        "bgColor": "#aa9b57",
         "fgColor": "#c9101a",
         "songs": [
           "Omertà",
@@ -657,7 +657,7 @@
         "albumNum": 12,
         "albumName": "Dark Lane",
         "bgColor": "#141507",
-        "fgColor": "#4d5212",
+        "fgColor": "#7e833a",
         "songs": [
           "Deep Pockets",
           "When To Say When",
