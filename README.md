@@ -5,5 +5,4 @@ Still under development. Thanks for being patient. Come back soon.
 
 Thank you to [@RealFavicon](https://twitter.com/RealFavicon) for the amazing favicon generator.
 
-ARTIST MADNESS does not claim any right over the works it references.
-All rights reserved to the respective copyright owners.
+Titles of works come from [Wikipedia](https://wikipedia.org/). Used under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
