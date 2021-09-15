@@ -33,6 +33,12 @@ var currentSelection = 0;
 var inProgress = false;
 var HORIZONTAL_LINE_LENGTH = 165;
 
+window.onbeforeunload = function() {
+  if(inProgress)
+    return 'Your bracket is still in progress. Are you sure you want to leave?'; //message doesn't actually display but whatever
+  return undefined;
+};
+
 function loadLists(artist) {
   fetch('artdata.json')
   .then(response => {
