@@ -321,26 +321,56 @@ function advanceRound(choice, size, levels, artist) {
   if(currentRound < levels-1) {
     context.rect(x, y, 170, 28);
     context.fill();
-
     context.fillStyle = selectedTrack.getAlbum().getTextColor();
     context.font = "16px Work Sans";
-    context.fillText(selectedTrack.getName(), x + 5, y + 20);
+
+    let textLength = context.measureText(selectedTrack.getName()).width;
+    if(textLength > 165){ //if the text is overflowing out of its background rectangle, scrunch it down
+      var scalex = (160 / textLength);
+      context.save();
+      context.scale(scalex, 1);
+      context.fillText(selectedTrack.getName(), (x+5)/scalex, y + 20);
+      context.restore();
+    }
+    else { //text is not overflowing
+      context.fillText(selectedTrack.getName(), x + 5, y + 20);
+    }
   }
   else if(lineup.length == 3) {
     context.rect(750, 580, 170, 28);
     context.fill();
-
     context.fillStyle = selectedTrack.getAlbum().getTextColor();
     context.font = "16px Work Sans";
-    context.fillText(selectedTrack.getName(), 755, 600);
+
+    let textLength = context.measureText(selectedTrack.getName()).width;
+    if(textLength > 165){ //if the text is overflowing out of its background rectangle, scrunch it down
+      var scalex = (160 / textLength);
+      context.save();
+      context.scale(scalex, 1);
+      context.fillText(selectedTrack.getName(), 755/scalex, 600);
+      context.restore();
+    }
+    else { //text is not overflowing
+      context.fillText(selectedTrack.getName(), 755, 600);
+    }
   }
   else if(lineup.length == 2) {
     context.rect(1010, 580, 170, 28);
     context.fill();
-
     context.fillStyle = selectedTrack.getAlbum().getTextColor();
     context.font = "16px Work Sans";
-    context.fillText(selectedTrack.getName(), 1015, 600);
+
+    let textLength = context.measureText(selectedTrack.getName()).width;
+    if(textLength > 165){ //if the text is overflowing out of its background rectangle, scrunch it down
+      var scalex = (160 / textLength);
+      context.save();
+      context.scale(scalex, 1);
+      context.fillText(selectedTrack.getName(), 1015/scalex, 600);
+      context.restore();
+    }
+    else { //text is not overflowing
+      context.fillText(selectedTrack.getName(), 1015, 600);
+    }
   }
   else if(lineup.length == 1) { //Champion
     context.rect(780, 480, 360, 60);
@@ -358,11 +388,11 @@ function advanceRound(choice, size, levels, artist) {
   }
   if(currentRound >= levels) {
     if(choice == 0) {
-      choice2.remove();
+      document.getElementById("songChoiceDiv2").remove();
       choice1.onclick = "";
     }
     else if (choice == 1) {
-      choice1.remove();
+      document.getElementById("songChoiceDiv1").remove();
       choice2.onclick = "";
     }
     document.getElementById('roundTitle').innerHTML = "CHAMPION";
@@ -405,17 +435,9 @@ function updateSelectionButton(choice, listen, i, artist) {
     case "DRIZZY": songwhipArtistName = "drake";
     break;
   }
-  let ampersandLoc = songwhipSongName.indexOf('&');
-  let spaceLoc = songwhipSongName.indexOf(' ');
-  while(ampersandLoc >= 0) {
-   songwhipSongName = songwhipSongName.slice(0, ampersandLoc) + 'and' + songwhipSongName.slice(ampersandLoc + 1, songwhipSongName.length);
-   ampersandLoc = songwhipSongName.indexOf('&');
-  }
-  while(spaceLoc >= 0) {
-	songwhipSongName = songwhipSongName.slice(0, spaceLoc) + '-' + songwhipSongName.slice(spaceLoc + 1, songwhipSongName.length);
-    spaceLoc = songwhipSongName.indexOf(' ');
-  }
-  songwhipSongName = songwhipSongName.replace(/[\/\\#,!+()$~%.'":*?<>{}]/g, '');
+  songwhipSongName = songwhipSongName.replace(/[&]/g, 'and'); //replace ampersands with 'and'
+  songwhipSongName = songwhipSongName.replace(/[\s/]/g, '-'); //replace spaces and forward slashes with hyphens
+  songwhipSongName = songwhipSongName.replace(/[\\#,!+()$~%.'":*?<>{}]/g, ''); //remove every other special character
   listen.onclick = function () {
     window.open('https://songwhip.com/' + songwhipArtistName + '/' + songwhipSongName, '_blank');
   };
