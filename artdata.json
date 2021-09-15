@@ -138,7 +138,7 @@
           "Murder to Excellence",
           "Made in America",
           "Why I Love You",
-          "Illest Motherfucker Alive",
+          "Illest Motherf**ker Alive",
           "H.A.M",
           "Primetime",
           "The Joy"
@@ -508,6 +508,26 @@
       },
       {
         "albumNum": 6,
+        "albumName": "WATTBA",
+        "bgColor": "#ffffff",
+        "fgColor": "#707070",
+        "songs": [
+          "Digital Dash",
+          "Big Rings",
+          "Live From the Gutter",
+          "Diamonds Dancing",
+          "Scholarships",
+          "Plastic Bag",
+          "I'm the Plug",
+          "Change Locations",
+          "Jumpman",
+          "30 for 30 Freestyle"
+        ],
+        "blacklistSongs": [
+        ]
+      },
+      {
+        "albumNum": 7,
         "albumName": "FromThe6",
         "bgColor": "#9aa1a9",
         "fgColor": "#532629",
@@ -537,7 +557,7 @@
         ]
       },
       {
-        "albumNum": 7,
+        "albumNum": 8,
         "albumName": "Life",
         "bgColor": "#dbaf8a",
         "fgColor": "#0e63a8",
@@ -569,7 +589,7 @@
         ]
       },
       {
-        "albumNum": 8,
+        "albumNum": 9,
         "albumName": "Scary1",
         "bgColor": "#232323",
         "fgColor": "#f92f49",
@@ -580,7 +600,7 @@
         ]
       },
       {
-        "albumNum": 9,
+        "albumNum": 10,
         "albumName": "Scorpion",
         "bgColor": "#282828",
         "fgColor": "#f8f8f8",
@@ -615,7 +635,7 @@
         ]
       },
       {
-        "albumNum": 10,
+        "albumNum": 11,
         "albumName": "BestInTheWorld",
         "bgColor": "#aa9b57",
         "fgColor": "#c9101a",
@@ -627,7 +647,7 @@
         ]
       },
       {
-        "albumNum": 11,
+        "albumNum": 12,
         "albumName": "Package",
         "bgColor": "#000000",
         "fgColor": "#b3c5e1",
@@ -654,7 +674,7 @@
         ]
       },
       {
-        "albumNum": 12,
+        "albumNum": 13,
         "albumName": "Dark Lane",
         "bgColor": "#141507",
         "fgColor": "#99a042",
@@ -678,7 +698,7 @@
         ]
       },
       {
-        "albumNum": 13,
+        "albumNum": 14,
         "albumName": "Scary2",
         "bgColor": "#111731",
         "fgColor": "#97F8FE",
@@ -691,7 +711,7 @@
         ]
       },
       {
-        "albumNum": 14,
+        "albumNum": 15,
         "albumName": "Certified",
         "bgColor": "#c586a5",
         "fgColor": "#2f2b5f",
@@ -722,7 +742,7 @@
         ]
       },
       {
-        "albumNum": 15,
+        "albumNum": 16,
         "albumName": "Back2Back",
         "bgColor": "#000000",
         "fgColor": "#ffffff",
@@ -733,7 +753,7 @@
         ]
       },
       {
-        "albumNum": 16,
+        "albumNum": 17,
         "albumName": "Charged",
         "bgColor": "#000000",
         "fgColor": "#5ece44",
