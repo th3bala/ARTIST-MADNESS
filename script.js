@@ -170,9 +170,19 @@ function loadBracket(artist, size) {
     context.fill();
   }
 
-  context.fillStyle = "#000000";
-  context.font = "44px Work Sans";
-  context.fillText("ARTISTMADNESS.COM", 727, 50);
+  context.fillStyle = "#f9f9f9"; //faint grey watermark
+  context.font = "35px Work Sans";
+  for(let i = 0; i < 5; i++) {
+    for(let j = 0; j < 21; j++) {
+      if(i == 2 && j == 0) { //draw one in dark grey at the middle top
+        context.save();
+        context.fillStyle = "#424141";
+        context.fillText("ARTISTMADNESS.COM", 387 * i, 40 + 50 * j);
+        context.restore();
+      }
+      else context.fillText("ARTISTMADNESS.COM", 387 * i, 40 + 50 * j);
+    }
+  }
 
   context.fillStyle = "#ff0000";
   context.lineWidth = 5;
