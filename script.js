@@ -223,8 +223,8 @@ function restart(artist) {
   let elementsToRemove = [];
   document.getElementById('roundTitle').remove();
   elementsToRemove.push(document.getElementById('or'));
-  elementsToRemove.push(document.getElementById('songChoiceDiv1'));
-  elementsToRemove.push(document.getElementById('songChoiceDiv2'));
+  elementsToRemove.push(document.getElementById('songChoiceButton1'));
+  elementsToRemove.push(document.getElementById('songChoiceButton2'));
   elementsToRemove.forEach((element) => {
     if(element != null)
       element.remove();
@@ -254,29 +254,23 @@ function setupRounds(artist, size) {
   or.id = "or";
   or.innerHTML = "OR";
 
-  for(let i = 0; i < 2; i++) {
-	  let choiceDiv = document.createElement("DIV");
-	  choiceDiv.style.display = "flex";
-	  choiceDiv.style.justifyContent = "center";
-	  choiceDiv.id = "songChoiceDiv" + (i + 1);
-	  choice = document.createElement("BUTTON");
-	  choice.className = "songChoiceButton";
-	  choice.id = "songChoiceButton" + (i + 1);
-	  listen = document.createElement("BUTTON");
-	  listen.className = "listenButton";
-	  listen.id = "listenButton" + (i + 1);
-	  listen.innerHTML = "LISTEN &#9654";
-	  updateSelectionButton(choice, listen, i, artist);
-	  choice.onclick = function() { advanceRound(i, size, LEVELS, artist); };
-	  document.getElementById("select").prepend(choiceDiv);
-	  choiceDiv.append(choice);
-	  choiceDiv.append(listen);
-	  if(i == 0) document.getElementById("select").prepend(or);
-  }
+  let choice1 = document.createElement("BUTTON");
+  let choice2 = document.createElement("BUTTON");
+  choice1.className = "songChoiceButton";
+  choice2.className = "songChoiceButton";
+  choice1.id = "songChoiceButton1";
+  choice2.id = "songChoiceButton2";
+  updateSelectionButtons(choice1, choice2);
+  choice1.onclick = function() { advanceRound(0, size, LEVELS); };
+  choice2.onclick = function() { advanceRound(1, size, LEVELS); };
+
+  document.getElementById("select").prepend(choice2);
+  document.getElementById("select").prepend(or);
+  document.getElementById("select").prepend(choice1);
   document.getElementById("select").prepend(roundTitle);
 }
 
-function advanceRound(choice, size, levels, artist) {
+function advanceRound(choice, size, levels) {
   let x = 15;
   let y = -13;
   var verticalLineGap = 33;
@@ -373,36 +367,16 @@ function advanceRound(choice, size, levels, artist) {
   else {
     currentSelection++;
   }
-  updateSelectionButton(choice1, document.getElementById("listenButton1"), 0, artist);
-  updateSelectionButton(choice2, document.getElementById("listenButton2"), 1, artist);
+  updateSelectionButtons(choice1, choice2);
 }
 
-function updateSelectionButton(choice, listen, i, artist) {
-  choice.innerHTML = lineup[currentSelection + i].getName();
-  choice.style.backgroundColor = lineup[currentSelection + i].getAlbum().getBackgroundColor();
-  choice.style.color = lineup[currentSelection + i].getAlbum().getTextColor();
-  let songwhipArtistName;
-  let songwhipSongName = lineup[currentSelection + i].getName().toLowerCase();
-  switch (artist) {
-    case "KANYE": songwhipArtistName = "kanye-west";
-    break;
-    case "DRIZZY": songwhipArtistName = "drake";
-    break;
-  }
-  let ampersandLoc = songwhipSongName.indexOf('&');
-  let spaceLoc = songwhipSongName.indexOf(' ');
-  while(ampersandLoc >= 0) {
-   songwhipSongName = songwhipSongName.slice(0, ampersandLoc) + 'and' + songwhipSongName.slice(ampersandLoc + 1, songwhipSongName.length);
-   ampersandLoc = songwhipSongName.indexOf('&');
-  }
-  while(spaceLoc >= 0) {
-	songwhipSongName = songwhipSongName.slice(0, spaceLoc) + '-' + songwhipSongName.slice(spaceLoc + 1, songwhipSongName.length);
-    spaceLoc = songwhipSongName.indexOf(' ');
-  }
-  songwhipSongName = songwhipSongName.replace(/[\/\\#,!+()$~%.'":*?<>{}]/g, '');
-  listen.onclick = function () {
-    window.open('https://songwhip.com/' + songwhipArtistName + '/' + songwhipSongName, '_blank');
-  };
+function updateSelectionButtons(choice1, choice2) {
+  choice1.innerHTML = lineup[currentSelection].getName();
+  choice2.innerHTML = lineup[currentSelection+1].getName();
+  choice1.style.backgroundColor = lineup[currentSelection].getAlbum().getBackgroundColor();
+  choice2.style.backgroundColor = lineup[currentSelection+1].getAlbum().getBackgroundColor();
+  choice1.style.color = lineup[currentSelection].getAlbum().getTextColor();
+  choice2.style.color = lineup[currentSelection+1].getAlbum().getTextColor();
 }
 
 function generateBracket(artist, size) {
