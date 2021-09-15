@@ -30,6 +30,7 @@ var blacklist = [];
 var lineup = [];
 var currentRound = 1;
 var currentSelection = 0;
+var inProgress = false;
 var HORIZONTAL_LINE_LENGTH = 165;
 
 function loadLists(artist) {
@@ -208,6 +209,9 @@ function loadBracket(artist, size) {
 }
 
 function restart(artist) {
+  if(inProgress) {
+    if(!confirm("Your bracket is still in progress. Are you sure you want to leave?")) return;
+  }
   let generateButton = document.getElementById('restartButton');
   generateButton.id = "generateButton";
   generateButton.innerText = 'GENERATE BRACKET';
@@ -227,6 +231,7 @@ function restart(artist) {
   });
   currentRound = 1;
   currentSelection = 0;
+  inProgress = false;
 }
 
 function setupRounds(artist, size) {
@@ -340,7 +345,7 @@ function advanceRound(choice, size, levels) {
     }
     document.getElementById('roundTitle').innerHTML = "CHAMPION";
     document.getElementById('or').remove();
-    finishRounds();
+    inProgress = false;
     return;
   }
   else if (currentSelection + 1 >= currentSize / 2) {
@@ -374,11 +379,8 @@ function updateSelectionButtons(choice1, choice2) {
   choice2.style.color = lineup[currentSelection+1].getAlbum().getTextColor();
 }
 
-function finishRounds() {
-  //hide button
-}
-
 function generateBracket(artist, size) {
+  inProgress = true;
   var canvas = document.getElementById('bracket'),
   context = canvas.getContext('2d');
   //get 64 random tracks from the whitelist
