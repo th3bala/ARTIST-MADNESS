@@ -16,8 +16,20 @@
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
+		<script>
+			function updateClock() {
+				var currentTime = new Date ( );
+				var currentHours = currentTime.getHours();
+				var currentMinutes = currentTime.getMinutes();
+				var currentSeconds = currentTime.getSeconds();
+				currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+				currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+				var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
+				document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+			}
+		</script>
 	</head>
-	<body>
+	<body onload="updateClock(); setInterval('updateClock()', 1000)">
     <h1>ARTIST MADNESS</h1>
     <a class = "madnessLink" href = "kanyemadness.html">KANYE MADNESS</a>
 		<br><br>
@@ -34,6 +46,8 @@
 		<a class = "madnessLink"><s>K.DOT MADNESS</s></a>
 		<nav id = "footerNav">
 			<a class = "footerNavLink" href = "about.html">ABOUT</a>
+			<b>|</b>
+			<span id= "clock">&nbsp;</span>
 			<b>|</b>
 			<a class = "footerNavLink" href = "privacypolicy.html">PRIVACY POLICY</a>
 		</nav>
