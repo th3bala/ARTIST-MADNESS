@@ -333,7 +333,7 @@
         "artist": "kanye-west",
         "songs": [
           {"dispName": "Only One", "altName": null},
-          {"dispName": "FourFiveSeconds", "altName": null},
+          {"dispName": "FourFiveSeconds", "altName": "rihanna/fourfiveseconds"},
           {"dispName": "All Day", "altName": null}
         ],
         "blacklistSongs": []

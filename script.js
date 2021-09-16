@@ -435,11 +435,12 @@ function updateSelectionButton(choice, listen, i, artist) {
   choice.innerHTML = currentTrack.getName();
   choice.style.backgroundColor = currentTrack.getAlbum().getBackgroundColor();
   choice.style.color = currentTrack.getAlbum().getTextColor();
+  listen.style.backgroundColor = "lime";
 
   if (currentTrack.getAltName() != null) {
     if (currentTrack.getAltName() == "") {
       listen.onclick = "";
-      listen.backgroundColor = "grey";
+      listen.style.backgroundColor = "grey";
     }
     else {
       listen.onclick = function () {
