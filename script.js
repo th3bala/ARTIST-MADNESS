@@ -1,10 +1,14 @@
 class Track {
-  constructor(name, album) {
+  constructor(name, altName, album) {
     this.name = name;
+    this.altName = altName;
     this.album = album;
   }
   getName() {
     return this.name;
+  }
+  getAltName() {
+    return this.altName;
   }
   getAlbum() {
     return this.album;
@@ -12,9 +16,13 @@ class Track {
 }
 
 class Album {
-  constructor(backgroundColor, textColor) {
+  constructor(artist, backgroundColor, textColor) {
+    this.artist = artist;
     this.backgroundColor = backgroundColor;
     this.textColor = textColor;
+  }
+  getArtist() {
+    return this.artist;
   }
   getBackgroundColor() {
     return this.backgroundColor;
@@ -53,12 +61,12 @@ function loadLists(artist) {
       break;
     }
     artistDataObj.albums.forEach((album) => {
-      let albumObj = new Album(album.bgColor, album.fgColor);
+      let albumObj = new Album(album.artist, album.bgColor, album.fgColor);
       album.songs.forEach((song) => {
-        whitelist.push(new Track(song, albumObj));
+        whitelist.push(new Track(song.dispName, song.altName, albumObj));
       });
       album.blacklistSongs.forEach((song) => {
-        blacklist.push(new Track(song, albumObj));
+        blacklist.push(new Track(song.dispName, song.altName, albumObj));
       })
     });
     let wl = document.getElementById("whitelist");
@@ -73,7 +81,6 @@ function loadLists(artist) {
 }
 
 function remove(name) {
-
   if(whitelist.length == 64) return; //refuse to allow the whitelist to go below 64 songs
 
   whitelist.find((t,i) => {
@@ -424,23 +431,32 @@ function advanceRound(choice, size, levels, artist) {
 }
 
 function updateSelectionButton(choice, listen, i, artist) {
-  choice.innerHTML = lineup[currentSelection + i].getName();
-  choice.style.backgroundColor = lineup[currentSelection + i].getAlbum().getBackgroundColor();
-  choice.style.color = lineup[currentSelection + i].getAlbum().getTextColor();
-  let songwhipArtistName;
-  let songwhipSongName = lineup[currentSelection + i].getName().toLowerCase();
-  switch (artist) {
-    case "KANYE": songwhipArtistName = "kanye-west";
-    break;
-    case "DRIZZY": songwhipArtistName = "drake";
-    break;
+  let currentTrack = lineup[currentSelection + i];
+  choice.innerHTML = currentTrack.getName();
+  choice.style.backgroundColor = currentTrack.getAlbum().getBackgroundColor();
+  choice.style.color = currentTrack.getAlbum().getTextColor();
+
+  if (currentTrack.getAltName() != null) {
+    if (currentTrack.getAltName() == "") {
+      listen.onclick = "";
+      listen.backgroundColor = "grey";
+    }
+    else {
+      listen.onclick = function () {
+        window.open('https://songwhip.com/' + currentTrack.getAltName(), '_blank');
+      };
+    }
   }
-  songwhipSongName = songwhipSongName.replace(/[&]/g, 'and'); //replace ampersands with 'and'
-  songwhipSongName = songwhipSongName.replace(/[\s/]/g, '-'); //replace spaces and forward slashes with hyphens
-  songwhipSongName = songwhipSongName.replace(/[\\#,!+()$~%.'":*?<>{}]/g, ''); //remove every other special character
-  listen.onclick = function () {
-    window.open('https://songwhip.com/' + songwhipArtistName + '/' + songwhipSongName, '_blank');
-  };
+  else {
+    let songwhipArtistName = currentTrack.getAlbum().getArtist();
+    let songwhipSongName = currentTrack.getName().toLowerCase();
+    songwhipSongName = songwhipSongName.replace(/[&]/g, 'and'); //replace ampersands with 'and'
+    songwhipSongName = songwhipSongName.replace(/[\s/]/g, '-'); //replace spaces and forward slashes with hyphens
+    songwhipSongName = songwhipSongName.replace(/[\\#,!+()$~%.'":*?<>{}]/g, ''); //remove every other special character
+    listen.onclick = function () {
+      window.open('https://songwhip.com/' + songwhipArtistName + '/' + songwhipSongName, '_blank');
+    };
+  }
 }
 
 function generateBracket(artist, size) {
