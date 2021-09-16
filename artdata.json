@@ -800,5 +800,347 @@
         ]
       }
     ]
+  },
+  "KDOT": {
+    "albums": [
+      {
+        "albumNum": 0,
+        "albumName": "80",
+        "bgColor": "#212a2f",
+        "fgColor": "#f9dfa2",
+        "artist": "kendrick-lamar",
+        "songs": [
+          {
+            "dispName": "Fuck Your Ethnicity",
+            "altName": null
+          },
+          {
+            "dispName": "Hol' Up",
+            "altName": null
+          },
+          {
+            "dispName": "A.D.H.D",
+            "altName": null
+          },
+          {
+            "dispName": "No Make-Up (Her Vice)",
+            "altName": null
+          },
+          {
+            "dispName": "Tammy's Song (Her Evils)",
+            "altName": null
+          },
+          {
+            "dispName": "Chapter Six",
+            "altName": null
+          },
+          {
+            "dispName": "Ronald Reagan Era",
+            "altName": null
+          },
+          {
+            "dispName": "Poe Mans Dreams (His Vice)",
+            "altName": null
+          },
+          {
+            "dispName": "The Spiteful Chant",
+            "altName": null
+          },
+          {
+            "dispName": "Chapter Ten",
+            "altName": null
+          },
+          {
+            "dispName": "Keisha's Song (Her Pain)",
+            "altName": null
+          },
+          {
+            "dispName": "Rigamortis",
+            "altName": null
+          },
+          {
+            "dispName": "Kush & Corinthians (His Pain)",
+            "altName": null
+          },
+          {
+            "dispName": "Blow My High (Members Only)",
+            "altName": null
+          },
+          {
+            "dispName": "Ab-Soul's Outro",
+            "altName": null
+          },
+          {
+            "dispName": "HiiiPoWeR",
+            "altName": null
+          }
+        ]
+      },
+      {
+        "albumNum": 1,
+        "albumName": "GKMC",
+        "bgColor": "#7cb9ce",
+        "fgColor": "#322f40",
+        "artist": "kendrick-lamar",
+        "songs": [
+          {
+            "dispName": "Sherane a.k.a Master Splinter's Daughter",
+            "altName": null
+          },
+          {
+            "dispName": "Bitch, Don't Kill My Vibe",
+            "altName": null
+          },
+          {
+            "dispName": "Backseat Freestyle",
+            "altName": null
+          },
+          {
+            "dispName": "The Art of Peer Pressure",
+            "altName": null
+          },
+          {
+            "dispName": "Money Trees",
+            "altName": null
+          },
+          {
+            "dispName": "Poetic Justice",
+            "altName": null
+          },
+          {
+            "dispName": "good kid",
+            "altName": null
+          },
+          {
+            "dispName": "m.A.A.d city",
+            "altName": null
+          },
+          {
+            "dispName": "Swimming Pools (Drank)",
+            "altName": null
+          },
+          {
+            "dispName": "Sing About Me, I'm Dying of Thirst",
+            "altName": null
+          },
+          {
+            "dispName": "Real",
+            "altName": null
+          },
+          {
+            "dispName": "Compton",
+            "altName": null
+          }
+        ]
+      },
+      {
+        "albumNum": 2,
+        "albumName": "TPAB",
+        "bgColor": "#2b292a",
+        "fgColor": "#eeeeee",
+        "artist": "kendrick-lamar",
+        "songs": [
+          {
+            "dispName": "Wesley's Theory",
+            "altName": null
+          },
+          {
+            "dispName": "For Free? (Interlude)",
+            "altName": null
+          },
+          {
+            "dispName": "King Kunta",
+            "altName": null
+          },
+          {
+            "dispName": "Institutionalized",
+            "altName": null
+          },
+          {
+            "dispName": "These Walls",
+            "altName": null
+          },
+          {
+            "dispName": "U",
+            "altName": null
+          },
+          {
+            "dispName": "Alright",
+            "altName": null
+          },
+          {
+            "dispName": "For Sale? (Interlude)",
+            "altName": null
+          },
+          {
+            "dispName": "Momma",
+            "altName": null
+          },
+          {
+            "dispName": "Hood Politics",
+            "altName": null
+          },
+          {
+            "dispName": "How Much a Dollar Cost",
+            "altName": null
+          },
+          {
+            "dispName": "Complexion (A Zulu Love)",
+            "altName": null
+          },
+          {
+            "dispName": "The Blacker the Berry",
+            "altName": null
+          },
+          {
+            "dispName": "You Ain't Gotta Lie (Momma Said)",
+            "altName": null
+          },
+          {
+            "dispName": "I",
+            "altName": null
+          },
+          {
+            "dispName": "Mortal Man",
+            "altName": null
+          }
+        ]
+      },
+      {
+        "albumNum": 3,
+        "albumName": "Untitled",
+        "bgColor": "#333202",
+        "fgColor": "#f7f9e3",
+        "artist": "kendrick-lamar",
+        "songs": [
+          {
+            "dispName": "untitled 01 | 08.19.2014.",
+            "altName": null
+          },
+          {
+            "dispName": "untitled 02 | 06.23.2014.",
+            "altName": null
+          },
+          {
+            "dispName": "untitled 03 | 05.28.2013.",
+            "altName": null
+          },
+          {
+            "dispName": "untitled 04 | 08.14.2014.",
+            "altName": null
+          },
+          {
+            "dispName": "untitled 05 | 09.21.2014.",
+            "altName": null
+          },
+          {
+            "dispName": "untitled 06 | 06.30.2014.",
+            "altName": null
+          },
+          {
+            "dispName": "untitled 07 | 2014-2016",
+            "altName": null
+          },
+          {
+            "dispName": "untitled 08 | 09.06.2014.",
+            "altName": null
+          }
+        ]
+      },
+      {
+        "albumNum": 4,
+        "albumName": "DAMN",
+        "bgColor": "#362c30",
+        "fgColor": "#ff0000",
+        "artist": "kendrick-lamar",
+        "songs": [
+          {
+            "dispName": "BLOOD.",
+            "altName": null
+          },
+          {
+            "dispName": "DNA.",
+            "altName": null
+          },
+          {
+            "dispName": "YAH.",
+            "altName": null
+          },
+          {
+            "dispName": "ELEMENT.",
+            "altName": null
+          },
+          {
+            "dispName": "FEEL.",
+            "altName": null
+          },
+          {
+            "dispName": "LOYALTY.",
+            "altName": null
+          },
+          {
+            "dispName": "PRIDE.",
+            "altName": null
+          },
+          {
+            "dispName": "HUMBLE.",
+            "altName": null
+          },
+          {
+            "dispName": "LUST.",
+            "altName": null
+          },
+          {
+            "dispName": "LOVE.",
+            "altName": null
+          },
+          {
+            "dispName": "XXX.",
+            "altName": null
+          },
+          {
+            "dispName": "FEAR.",
+            "altName": null
+          },
+          {
+            "dispName": "GOD.",
+            "altName": null
+          },
+          {
+            "dispName": "DUCKWORTH.",
+            "altName": null
+          }
+        ]
+      },
+      {
+        "albumNum": 5,
+        "albumName": "Panther",
+        "bgColor": "#000000",
+        "fgColor": "#ffffff",
+        "artist": "kendrick-lamar",
+        "songs": [
+          {
+            "dispName": "Black Panther",
+            "altName": null
+          },
+          {
+            "dispName": "All the Stars",
+            "altName": null
+          },
+          {
+            "dispName": "King's Dead",
+            "altName": null
+          },
+          {
+            "dispName": "Big Shot",
+            "altName": null
+          },
+          {
+            "dispName": "Pray for Me",
+            "altName": "the-weeknd/pray-for-me2021"
+          }
+        ]
+      }
+    ]
   }
 }

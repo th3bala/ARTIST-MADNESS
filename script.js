@@ -59,15 +59,19 @@ function loadLists(artist) {
       break;
       case "DRIZZY": artistDataObj = artData.DRIZZY;
       break;
+      case "KDOT": artistDataObj = artData.KDOT;
+      break;
     }
     artistDataObj.albums.forEach((album) => {
       let albumObj = new Album(album.artist, album.bgColor, album.fgColor);
-      album.songs.forEach((song) => {
-        whitelist.push(new Track(song.dispName, song.altName, albumObj));
-      });
-      album.blacklistSongs.forEach((song) => {
-        blacklist.push(new Track(song.dispName, song.altName, albumObj));
-      })
+      if(album.songs != null)
+        album.songs.forEach((song) => {
+          whitelist.push(new Track(song.dispName, song.altName, albumObj));
+        });
+      if(album.blacklistSongs != null)
+        album.blacklistSongs.forEach((song) => {
+          blacklist.push(new Track(song.dispName, song.altName, albumObj));
+        });
     });
     let wl = document.getElementById("whitelist");
     whitelist.forEach((item) => {
@@ -167,6 +171,8 @@ function loadBracket(artist, size) {
     case "KANYE": middle_image.src = 'images/kanyemadnesslogo' + Math.floor(Math.random() * 2) + '.png'
     break;
     case "DRIZZY": middle_image.src = 'images/drizzymadnesslogo0.png';
+    break;
+    case "KDOT": middle_image.src = 'images/kdotmadnesslogo0.png';
     break;
   }
 
@@ -452,8 +458,9 @@ function updateSelectionButton(choice, listen, i, artist) {
     let songwhipArtistName = currentTrack.getAlbum().getArtist();
     let songwhipSongName = currentTrack.getName().toLowerCase();
     songwhipSongName = songwhipSongName.replace(/[&]/g, 'and'); //replace ampersands with 'and'
+    songwhipSongName = songwhipSongName.replace(/[\\#,!+()|$~%.'":*?<>{}-]/g, ''); //remove every other special character
     songwhipSongName = songwhipSongName.replace(/[\s/]/g, '-'); //replace spaces and forward slashes with hyphens
-    songwhipSongName = songwhipSongName.replace(/[\\#,!+()$~%.'":*?<>{}]/g, ''); //remove every other special character
+    songwhipSongName = songwhipSongName.replace(/--+/g, '-') //replace multiple hyphens with only one
     listen.onclick = function () {
       window.open('https://songwhip.com/' + songwhipArtistName + '/' + songwhipSongName, '_blank');
     };
