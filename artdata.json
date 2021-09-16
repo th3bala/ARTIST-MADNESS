@@ -76,8 +76,8 @@
           {"dispName": "Big Brother", "altName": null}
         ],
         "blacklistSongs": [
-          "Good Night",
-          "Bittersweet Poetry"
+          {"dispName": "Good Night", "altName": "kanye-west/good-night-bonus-track"},
+          {"dispName": "Bittersweet Poetry", "altName": ""}
         ]
       },
       {
