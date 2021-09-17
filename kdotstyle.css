@@ -19,3 +19,6 @@ html {
 	flex-direction: column;
 	justify-content: center;
 }
+.footerNavLink {
+  color: white;
+}
