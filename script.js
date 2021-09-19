@@ -450,7 +450,7 @@ function updateSelectionButton(choice, listen, i, artist) {
     }
     else {
       listen.onclick = function () {
-        window.open('https://songwhip.com/' + currentTrack.getAltName(), '_blank');
+        window.open(currentTrack.getAltName(), '_blank');
       };
     }
   }

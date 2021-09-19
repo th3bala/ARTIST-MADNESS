@@ -41,12 +41,12 @@
           {"dispName": "Roses", "altName": null},
           {"dispName": "Bring Me Down", "altName": null},
           {"dispName": "Addiction", "altName": null},
-          {"dispName": "Diamonds (Remix)", "altName": "kanye-west/diamonds-from-sierra-leone-remix2005"},
+          {"dispName": "Diamonds (Remix)", "altName": "https://songwhip.com/kanye-west/diamonds-from-sierra-leone-remix2005"},
           {"dispName": "We Major", "altName": null},
           {"dispName": "Hey Mama", "altName": null},
           {"dispName": "Celebration", "altName": null},
           {"dispName": "Gone", "altName": null},
-          {"dispName": "Diamonds (Solo)", "altName": "kanye-west/diamondsfromsierraleone"},
+          {"dispName": "Diamonds (Solo)", "altName": "https://songwhip.com/kanye-west/diamondsfromsierraleone"},
           {"dispName": "Late", "altName": null}
         ],
         "blacklistSongs": [
@@ -76,7 +76,7 @@
           {"dispName": "Big Brother", "altName": null}
         ],
         "blacklistSongs": [
-          {"dispName": "Good Night", "altName": "kanye-west/good-night-bonus-track"},
+          {"dispName": "Good Night", "altName": "https://songwhip.com/kanye-west/good-night-bonus-track"},
           {"dispName": "Bittersweet Poetry", "altName": ""}
         ]
       },
@@ -145,7 +145,7 @@
           {"dispName": "Made in America", "altName": null},
           {"dispName": "Why I Love You", "altName": null},
           {"dispName": "Illest Motherf**ker Alive", "altName": null},
-          {"dispName": "H.A.M", "altName": "kanye-west/ham"},
+          {"dispName": "H.A.M", "altName": "https://songwhip.com/kanye-west/ham"},
           {"dispName": "Primetime", "altName": null},
           {"dispName": "The Joy", "altName": null}
         ],
@@ -197,7 +197,7 @@
         "artist": "kanye-west",
         "songs": [
           {"dispName": "Ultralight Beam", "altName": null},
-          {"dispName": "FSMH Pt. 1", "altName": "kanye-west/father-stretch-my-hands-pt-1"},
+          {"dispName": "FSMH Pt. 1", "altName": "https://songwhip.com/kanye-west/father-stretch-my-hands-pt-1"},
           {"dispName": "Pt. 2", "altName": null},
           {"dispName": "Famous", "altName": null},
           {"dispName": "Feedback", "altName": null},
@@ -289,7 +289,7 @@
           {"dispName": "Remote Control", "altName": null},
           {"dispName": "Moon", "altName": null},
           {"dispName": "Heaven and Hell", "altName": null},
-          {"dispName": "Donda", "altName": "kanye-west/donda2021"},
+          {"dispName": "Donda", "altName": "https://songwhip.com/kanye-west/donda2021"},
           {"dispName": "Keep My Spirit Alive", "altName": null},
           {"dispName": "Jesus Lord", "altName": null},
           {"dispName": "New Again", "altName": null},
@@ -333,7 +333,7 @@
         "artist": "kanye-west",
         "songs": [
           {"dispName": "Only One", "altName": null},
-          {"dispName": "FourFiveSeconds", "altName": "rihanna/fourfiveseconds"},
+          {"dispName": "FourFiveSeconds", "altName": "https://songwhip.com/rihanna/fourfiveseconds"},
           {"dispName": "All Day", "altName": null}
         ],
         "blacklistSongs": []
@@ -495,7 +495,7 @@
           {"dispName": "The Language", "altName": null},
           {"dispName": "305 To My City", "altName": null},
           {"dispName": "Too Much", "altName": null},
-          {"dispName": "Pound Cake/Paris Morton", "altName": "drake/pound-cake-paris-morton-music-2"},
+          {"dispName": "Pound Cake/Paris Morton", "altName": "https://songwhip.com/drake/pound-cake-paris-morton-music-2"},
           {"dispName": "Come Thru", "altName": null},
           {"dispName": "All Me", "altName": null}
         ],
@@ -804,8 +804,134 @@
   "KDOT": {
     "albums": [
       {
-        "albumNum": 0,
-        "albumName": "80",
+        "albumNum": 3,
+        "albumName": "Kendrick Lamar (EP)",
+        "bgColor": "#ffffff",
+        "fgColor": "#000000",
+        "artist": "kendrick-lamar",
+        "songs": [
+          {
+            "dispName": "Is It Love",
+            "altName": "https://www.youtube.com/watch?v=RuRxLQxj2g4&list=PL4369FEBC7FC539E8&index=1"
+          },
+          {
+            "dispName": "Celebration",
+            "altName": "https://www.youtube.com/watch?v=DF8QbhoUFGQ&list=PL4369FEBC7FC539E8&index=2"
+          },
+          {
+            "dispName": "P & P",
+            "altName": "https://www.youtube.com/watch?v=cEIMQhyPk0k&list=PL4369FEBC7FC539E8&index=3"
+          },
+          {
+            "dispName": "She Needs Me",
+            "altName": "https://www.youtube.com/watch?v=_kE-GOYqWsc&list=PL4369FEBC7FC539E8&index=4"
+          },
+          {
+            "dispName": "Wanna Be Heard",
+            "altName": "https://www.youtube.com/watch?v=1VqTaV3hbvY&list=PL4369FEBC7FC539E8&index=6"
+          },
+          {
+            "dispName": "I Do This",
+            "altName": "https://www.youtube.com/watch?v=yiel4RTZ-tY&list=PL4369FEBC7FC539E8&index=7"
+          },
+          {
+            "dispName": "Uncle Bobby & Jason Keaton",
+            "altName": "https://www.youtube.com/watch?v=tPRxiCzMst8&list=PL4369FEBC7FC539E8&index=8"
+          },
+          {
+            "dispName": "Faith",
+            "altName": "https://www.youtube.com/watch?v=wKawWHhKjlw&list=PL4369FEBC7FC539E8&index=9"
+          },
+          {
+            "dispName": "Trip",
+            "altName": "https://www.youtube.com/watch?v=REobv3J3OqU&list=PL4369FEBC7FC539E8&index=10"
+          },
+          {
+            "dispName": "Vanity Slaves",
+            "altName": "https://www.youtube.com/watch?v=_NNQQv-q4po&list=PL4369FEBC7FC539E8&index=11"
+          },
+          {
+            "dispName": "Far From Here",
+            "altName": "https://www.youtube.com/watch?v=TryLhNmMRUE&list=PL4369FEBC7FC539E8&index=12"
+          },
+          {
+            "dispName": "Thanksgiving",
+            "altName": "https://www.youtube.com/watch?v=7ojFn9j_4BQ&list=PL4369FEBC7FC539E8&index=13"
+          },
+          {
+            "dispName": "Let Me Be Me",
+            "altName": "https://www.youtube.com/watch?v=mvYO9GdXsos&list=PL4369FEBC7FC539E8&index=14"
+          }
+        ]
+      },
+      {
+        "albumNum": 4,
+        "albumName": "Overly Dedicated",
+        "bgColor": "#000000",
+        "fgColor": "#a9a9a9",
+        "artist": "kendrick-lamar",
+        "blacklistSongs": [
+          {
+            "dispName": "The Heart Pt. 2",
+            "altName": null
+          },
+          {
+            "dispName": "Growing Apart (To Get Closer)",
+            "altName": null
+          },
+          {
+            "dispName": "Night of the Living Junkies",
+            "altName": null
+          },
+          {
+            "dispName": "P&P 1.5",
+            "altName": null
+          },
+          {
+            "dispName": "Alien Girl (Today, W/ Her)",
+            "altName": null
+          },
+          {
+            "dispName": "Opposites Attract (Tomorrow, W/O Her)",
+            "altName": null
+          },
+          {
+            "dispName": "Michael Jordan",
+            "altName": null
+          },
+          {
+            "dispName": "Ignorance Is Bliss",
+            "altName": null
+          },
+          {
+            "dispName": "R.O.T.C. (Interlude)",
+            "altName": null
+          },
+          {
+            "dispName": "Barbed Wire",
+            "altName": null
+          },
+          {
+            "dispName": "Average Joe",
+            "altName": null
+          },
+          {
+            "dispName": "H.O.C",
+            "altName": null
+          },
+          {
+            "dispName": "Cut You Off (To Grow Closer)",
+            "altName": null
+          },
+          {
+            "dispName": "Heaven & Hell",
+            "altName": null
+          }
+        ]
+      },
+      {
+        "albumNum": 5,
+        "albumName": "Section.80",
         "bgColor": "#212a2f",
         "fgColor": "#f9dfa2",
         "artist": "kendrick-lamar",
@@ -877,7 +1003,7 @@
         ]
       },
       {
-        "albumNum": 1,
+        "albumNum": 6,
         "albumName": "GKMC",
         "bgColor": "#7cb9ce",
         "fgColor": "#322f40",
@@ -934,10 +1060,10 @@
         ]
       },
       {
-        "albumNum": 2,
+        "albumNum": 7,
         "albumName": "TPAB",
-        "bgColor": "#2b292a",
-        "fgColor": "#eeeeee",
+        "bgColor": "#eeeeee",
+        "fgColor": "#2b292a",
         "artist": "kendrick-lamar",
         "songs": [
           {
@@ -1007,7 +1133,7 @@
         ]
       },
       {
-        "albumNum": 3,
+        "albumNum": 8,
         "albumName": "Untitled",
         "bgColor": "#333202",
         "fgColor": "#f7f9e3",
@@ -1048,7 +1174,7 @@
         ]
       },
       {
-        "albumNum": 4,
+        "albumNum": 9,
         "albumName": "DAMN",
         "bgColor": "#362c30",
         "fgColor": "#ff0000",
@@ -1113,7 +1239,7 @@
         ]
       },
       {
-        "albumNum": 5,
+        "albumNum": 10,
         "albumName": "Panther",
         "bgColor": "#000000",
         "fgColor": "#ffffff",
@@ -1137,7 +1263,7 @@
           },
           {
             "dispName": "Pray for Me",
-            "altName": "the-weeknd/pray-for-me2021"
+            "altName": "https://songwhip.com/the-weeknd/pray-for-me2021"
           }
         ]
       }
