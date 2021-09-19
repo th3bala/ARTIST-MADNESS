@@ -783,8 +783,6 @@
         "artist": "drake",
         "songs": [
           {"dispName": "Back to Back", "altName": null}
-        ],
-        "blacklistSongs": [
         ]
       },
       {
@@ -795,8 +793,6 @@
         "artist": "drake",
         "songs": [
           {"dispName": "Charged Up", "altName": null}
-        ],
-        "blacklistSongs": [
         ]
       }
     ]
@@ -809,7 +805,7 @@
         "bgColor": "#ffffff",
         "fgColor": "#000000",
         "artist": "kendrick-lamar",
-        "songs": [
+        "blacklistSongs": [
           {
             "dispName": "Is It Love",
             "altName": "https://www.youtube.com/watch?v=RuRxLQxj2g4&list=PL4369FEBC7FC539E8&index=1"
